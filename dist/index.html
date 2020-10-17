@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/png"
+      href="../assets/icons/LightMode/logo.png"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <title>Youtify | Media Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <a href="#"><h1 class="logo" id="logo">YOUTIFY</h1></a>
+
+        <div class="main-nav">
+          <ul>
+            <li class="active">
+              <a href="#">
+                <img
+                  id="home-icon"
+                  src="../assets/icons/LightMode/home.svg"
+                  alt="Home Icon"
+                />
+                <h3>Home</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  id="albums-icon"
+                  src="../assets/icons/LightMode/albums.svg"
+                  alt="Albums Icon"
+                />
+                <h3>Albums</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  id="artists-icon"
+                  src="../assets/icons/LightMode/artists.svg"
+                  alt="Artists Icon"
+                />
+                <h3>Artists</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  id="videos-icon"
+                  src="../assets/icons/LightMode/videos.svg"
+                  alt="Videos Icon"
+                />
+                <h3>Videos</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <h2>MY MUSIC</h2>
+
+        <div class="my-music-nav">
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  id="clock-icon"
+                  src="../assets/icons/LightMode/clock.svg"
+                  alt="Clock Icon"
+                />
+                <h3>Recently Played</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  id="like-icon"
+                  src="../assets/icons/LightMode/like.svg"
+                  alt="Like Icon"
+                />
+                <h3>Favorite Songs</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  id="library-icon"
+                  src="../assets/icons/LightMode/library.svg"
+                  alt="Library Icon"
+                />
+                <h3>Library</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="search-icon"></div>
+
+        <div class="search-container">
+          <img src="../assets/icons/LightMode/search.svg" alt="Search Icon" />
+          <input type="text" placeholder="Search for lyrics" />
+        </div>
+      </aside>
+
+      <main>
+        <!-- Search bar & Settings -->
+        <section class="header">
+          <div class="search-container">
+            <input type="text" placeholder="Search for lyrics" />
+            <img src="../assets/icons/LightMode/search.svg" alt="Search Icon" />
+          </div>
+
+          <div class="settings">
+            <button id="dark-mode-toggle">
+              <img
+                title="Light/Dark Mode"
+                id="settings-icon"
+                src="../assets/icons/LightMode/settings.svg"
+                alt="Settings Icon"
+              />
+            </button>
+            <button>
+              <img
+                id="bell-icon"
+                src="../assets/icons/LightMode/bell.svg"
+                alt="Bell Icon"
+              />
+            </button>
+            <button class="user">
+              <img
+                src="../assets/icons/LightMode/user-avatar.svg"
+                alt="User Avatar Icon"
+              />
+            </button>
+          </div>
+        </section>
+
+        <!-- Discover Section -->
+        <section class="discover">
+          <h2>New Releases</h2>
+          <div class="preview-container">
+            <div class="song-container">
+              <div class="song-cover">
+                <!-- <img
+                  src="../assets/images/one-republic-low.jpg"
+                  alt="One Republic"
+                /> -->
+              </div>
+              <h3>Rescue Me</h3>
+              <h4>OneRepublic</h4>
+            </div>
+            <div class="song-container">
+              <div class="song-cover">
+                <!-- <img
+                src="../assets/images/taylor-swift-me.jpg"
+                alt="Taylor Swift"
+                /> -->
+              </div>
+              <h3>ME!</h3>
+              <h4>Taylor Swift</h4>
+            </div>
+            <div class="song-container">
+              <div class="song-cover">
+                <!-- <img src="../assets/images/miike-snow-med.jpg" alt="Miike Snow" /> -->
+              </div>
+              <h3>Genghis Khan</h3>
+              <h4>Miike Snow</h4>
+            </div>
+            <div class="song-container">
+              <div class="song-cover">
+                <!-- <img src="../assets/images/the-weeknd-med.jpg" alt="The Weeknd" /> -->
+              </div>
+              <h3>Blinding Lights</h3>
+              <h4>The Weeknd</h4>
+            </div>
+            <div class="song-container">
+              <div class="song-cover">
+                <!-- <img
+                src="../assets/images/bends-med.jpg"
+                alt="The Chain Gang of 1974"
+                /> -->
+              </div>
+              <h3>Bends</h3>
+              <h4>The Chain Gang of 1974</h4>
+            </div>
+          </div>
+        </section>
+
+        <section class="popular-media">
+          <!-- Video of the Week Section -->
+          <section class="top-video">
+            <h2>Video of the Week</h2>
+            <div class="video-container" id="video-container">
+              <video
+                src="../assets/videos/Rick Astley - Never Gonna Give You Up.mp4"
+                poster="../assets/images/originals/bends-poster.jpg"
+              ></video>
+              <div class="video-controls">
+                <span id="video-timestamp">00:00 / 00:00</span>
+                <button id="video-play" class="btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="video-progress-container">
+                  <div class="video-progress"></div>
+                </div>
+                <button id="video-volume" class="btn">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+                <button id="video-expand" class="btn">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+              <!-- <button id="video-play-btn">
+                <img
+                  src="../assets/icons/video-play-cover.svg"
+                  alt="Play Button"
+                />
+              </button> -->
+            </div>
+            <h3>The Chain Gang of 1974 - Bends (Official Music Video)</h3>
+          </section>
+
+          <!-- Top hits Section -->
+          <section class="top-hits">
+            <h2>Today's Top Hits</h2>
+            <div class="top-hits-container">
+              <div class="top-hit">
+                <span>1</span>
+                <div class="song-info">
+                  <p>OneRepublic - Rescue Me</p>
+                  <p>Human</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>2</span>
+                <div class="song-info">
+                  <p>Miike Snow - Genghis Khan</p>
+                  <p>iii</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>3</span>
+                <div class="song-info">
+                  <p>The Killers - The Man</p>
+                  <p>Wonderful Wonderful</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>4</span>
+                <div class="song-info">
+                  <p>Capital Cities - Safe and Sound</p>
+                  <p>In a Tidal Wave of Mystery</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>5</span>
+                <div class="song-info">
+                  <p>Young the Giant - Superposition</p>
+                  <p>Mirror Master</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>6</span>
+                <div class="song-info">
+                  <p>Panic! At The Disco - Into the Unknown</p>
+                  <p>Frozen 2 (Original Motion Picture Soundtrack)</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>7</span>
+                <div class="song-info">
+                  <p>Maroon 5 - Cold</p>
+                  <p>Cold (feat. Future) - Single</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+              <div class="top-hit">
+                <span>8</span>
+                <div class="song-info">
+                  <p>Miley Cyrus - Mother's Daughter</p>
+                  <p>SHE IS COMING</p>
+                </div>
+                <button>
+                  <img
+                    id="like-icon"
+                    src="../assets/icons/LightMode/like.svg"
+                    alt="Like"
+                  />
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <!-- Audio Player -->
+      <section class="audio-player">
+        <div class="player-container">
+          <div class="audio-song-info">
+            <div id="audio-song-cover" class="audio-song-cover"></div>
+            <div class="audio-song-name" id="audio-song-name">
+              <h3>The Weeknd</h3>
+              <h4>Blinding Lights</h4>
+            </div>
+          </div>
+          <div class="controls">
+            <audio></audio>
+            <button class="previous-btn">
+              <img
+                id="previous-btn-icon"
+                src="../assets/icons/LightMode/previous-btn.svg"
+                alt="Previous Song"
+              />
+            </button>
+            <button class="play-btn">
+              <img
+                id="play-btn-icon"
+                src="../assets/icons/LightMode/play-btn.svg"
+                alt="Play Song"
+              />
+            </button>
+            <button class="next-btn">
+              <img
+                id="next-btn-icon"
+                src="../assets/icons/LightMode/next-btn.svg"
+                alt="Next Song"
+              />
+            </button>
+          </div>
+          <div class="progress-bar">
+            <h3 id="current-audio-progress">00:00</h3>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+            <h3 id="audio-duration">00:00</h3>
+          </div>
+          <div class="options">
+            <button id="repeat-btn">
+              <img
+                id="repeat-icon"
+                src="../assets/icons/LightMode/repeat-off.svg"
+                alt=""
+              />
+            </button>
+            <button id="volume-btn">
+              <img
+                id="volume-icon"
+                src="../assets/icons/LightMode/high-volume.svg"
+                alt=""
+              />
+            </button>
+            <div class="volume-progress-container">
+              <div class="volume-progress"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+.popular-media .top-hits {
+  width: 45%;
+
+  & h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #333;
+  }
+
+  & .top-hits-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .top-hit {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background: transparent;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #f4f4f4;
+      }
+
+      & span {
+        padding-right: 20px;
+      }
+
+      & .song-info p:first-child {
+        font-size: 16px;
+        color: #333;
+      }
+
+      & .song-info p:last-child {
+        font-size: 14px;
+        color: $secondary-color-light;
+      }
+
+      & button {
+        margin-left: auto;
+
+        & img {
+          width: 18px;
+        }
+      }
+    }
+  }
+}

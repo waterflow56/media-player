@@ -1,0 +1,173 @@
+main {
+  background-color: #fdfdfd;
+  width: 80vw;
+  padding-bottom: 400px; // don't forget to delete
+}
+
+main .header {
+  max-width: 92%;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .search-container {
+    position: relative;
+    width: 25%;
+
+    & input[type='text'] {
+      padding: 10px 50px;
+      border: 1px solid #ececec;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 12px;
+      color: #a8a8a8;
+    }
+
+    & input[type='text']:focus {
+      outline: none;
+    }
+
+    & input[type='text']::placeholder {
+      color: #a8a8a8;
+      opacity: 1;
+    }
+
+    & input[type='text']::-ms-input-placeholder {
+      color: #a8a8a8;
+    }
+
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+  }
+
+  & .settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12.5%;
+
+    & button img {
+      width: 20px;
+    }
+
+    & button.user {
+      & img {
+        width: 45px;
+      }
+    }
+  }
+}
+
+main .discover {
+  max-width: 92%;
+  margin: 0 auto;
+
+  & h2 {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #333;
+  }
+
+  & .preview-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .song-container {
+      width: 17.5%;
+
+      & .song-cover {
+        cursor: pointer;
+        height: 25vh;
+        max-width: 100%;
+        border-radius: 5px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          opacity: 0;
+          height: 25%;
+          width: 25%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url('../icons/video-play-cover.svg') center center/cover
+            no-repeat;
+          border-radius: 50%;
+          transition: opacity 0.2s;
+          z-index: 10;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          // visibility: hidden;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          transition: opacity 0.2s;
+          z-index: 5;
+        }
+
+        &:hover::after,
+        &:hover::before {
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(1) > .song-cover {
+        background: url('../images/OneRepublic - Rescue Me.jpg') center
+          center/cover no-repeat;
+      }
+
+      &:nth-child(2) > .song-cover {
+        background: url('../images/Taylor Swift - ME! (feat. Brendon Urie).jpg')
+          center center/cover no-repeat;
+      }
+
+      &:nth-child(3) > .song-cover {
+        background: url('../images/Miike Snow - Genghis Khan.jpg') center
+          center/cover no-repeat;
+      }
+      &:nth-child(4) > .song-cover {
+        background: url('../images/The Weeknd - Blinding Lights.jpg') center
+          center/cover no-repeat;
+      }
+      &:nth-child(5) > .song-cover {
+        background: url('../images/The Chain Gang of 1974 - Bends ft. TWINKIDS.jpg')
+          center center/cover no-repeat;
+      }
+
+      & h3 {
+        font-size: 17px;
+        margin-top: 10px;
+        color: #333;
+      }
+
+      & h4 {
+        font-size: 15px;
+        color: $secondary-color-light;
+      }
+    }
+  }
+}
+
+main .popular-media {
+  max-width: 92%;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+}

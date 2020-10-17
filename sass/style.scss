@@ -1,0 +1,23 @@
+// Lato Font-Family
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+// Reset
+@import 'reset';
+
+// Variables
+@import 'variables';
+
+// General styling
+@import 'sidebar';
+@import 'main';
+@import 'video-player';
+@import 'top-hits';
+
+// Audio player styling
+@import 'audio-player';
+
+// Dark Mode styling
+@import 'dark-mode';
+
+// Responsive Design
+@import 'mobile';

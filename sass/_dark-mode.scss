@@ -1,0 +1,110 @@
+body.dark-mode .container {
+  & aside {
+    background-color: #1e1e1e;
+
+    & h1.logo {
+      color: $primary-color-dark;
+    }
+
+    & .main-nav li,
+    & .my-music-nav li {
+      border-left-color: #1e1e1e;
+
+      & a {
+        color: #fff;
+      }
+    }
+
+    & .main-nav li.active {
+      border-left-color: $primary-color-dark;
+      background: linear-gradient(90deg, rgba(255, 107, 0, 0.2), transparent);
+    }
+
+    & .main-nav li:hover,
+    & .my-music-nav li:hover {
+      border-left-color: $primary-color-dark;
+    }
+
+    & h2 {
+      color: #737373;
+    }
+  }
+
+  & main {
+    background-color: #262626;
+
+    & .search-container {
+      & input[type='text'] {
+        border-color: $secondary-color-dark;
+        color: #eeeeee;
+        background-color: transparent;
+      }
+
+      & input[type='text']::placeholder {
+        color: #eeeeee;
+      }
+
+      & input[type='text']::-ms-input-placeholder {
+        color: #eeeeee;
+      }
+    }
+
+    & .discover h2,
+    & .discover h3,
+    & .popular-media h2,
+    & .popular-media h3,
+    & .popular-media span,
+    & .popular-media .song-info p:first-child {
+      color: $text-color-dark !important;
+    }
+
+    & .discover h4,
+    & .popular-media .song-info p:last-child {
+      color: $secondary-color-dark !important;
+    }
+
+    & .top-hits .top-hit {
+      border-radius: 5px;
+    }
+
+    & .top-hits .top-hit:hover {
+      background: #1e1e1e;
+    }
+  }
+
+  & section.audio-player {
+    background: #1e1e1e;
+
+    & .audio-song-info h3 {
+      color: $text-color-dark;
+    }
+
+    & .audio-song-info h4 {
+      color: $secondary-color-dark;
+    }
+
+    & .progress-bar h3 {
+      color: $text-color-dark;
+    }
+
+    & .progress-bar .progress-container .progress {
+      background-color: $primary-color-dark;
+      box-shadow: 0 0 1px $primary-color-dark;
+
+      &::before {
+        background-color: $primary-color-dark;
+        box-shadow: 0 0 1px $primary-color-dark;
+      }
+    }
+
+    & .options .volume-progress-container .volume-progress {
+      background-color: $primary-color-dark;
+      box-shadow: 0 0 1px $primary-color-dark;
+
+      &::before {
+        background-color: $primary-color-dark;
+        box-shadow: 0 0 1px $primary-color-dark;
+      }
+    }
+  }
+}

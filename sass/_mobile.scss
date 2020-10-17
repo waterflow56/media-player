@@ -1,0 +1,105 @@
+@media screen and (max-width: 426px) {
+  // html {
+  //   font-size: 10px;
+  // }
+
+  .container {
+    flex-direction: column;
+  }
+
+  // Sidebar
+  aside {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1rem;
+    position: relative;
+    // background: red;
+
+    & > a {
+      display: block;
+      margin: 1.25em 0;
+      text-align: center;
+    }
+
+    & .main-nav {
+      cursor: pointer;
+      background: url('../icons/LightMode/menu.svg') center center/cover
+        no-repeat;
+      width: 2em;
+      height: 2em;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    & .main-nav ul,
+    & h2,
+    & .my-music-nav ul {
+      display: none;
+    }
+
+    & .search-icon {
+      display: block;
+      cursor: pointer;
+      background: url('../icons/LightMode/search-mobile.svg') center
+        center/cover no-repeat;
+      width: 1.25em;
+      height: 1.25em;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      & + .search-container {
+        display: none;
+      }
+    }
+
+    & .search-icon:hover + .search-container {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: -50%;
+      left: 0;
+      // padding: 10px 50px;
+      // border: 1px solid #ececec;
+      // border-radius: 5px;
+      // font-size: 12px;
+      // color: #a8a8a8;
+
+      & input[type='text'] {
+        padding: 10px 50px;
+        border: 1px solid #ececec;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 12px;
+        color: #a8a8a8;
+      }
+
+      & input[type='text']:focus {
+        outline: none;
+      }
+
+      & input[type='text']::placeholder {
+        color: #a8a8a8;
+        opacity: 1;
+      }
+
+      & input[type='text']::-ms-input-placeholder {
+        color: #a8a8a8;
+      }
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  main {
+    display: none;
+  }
+}
