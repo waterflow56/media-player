@@ -1,17 +1,17 @@
 aside {
   background-color: #fff;
-  width: 20vw;
+  width: 20%;
   font-size: 1rem;
 
   & > a {
     display: inline-block;
     text-decoration: none;
+    font-size: calc(0.35vw + 0.5rem);
     margin: 2em 0 5em 4em;
   }
 
   & h1.logo {
     color: $primary-color-light;
-    font-size: 1.125em;
     letter-spacing: 0.2em;
     font-weight: 600;
   }
@@ -27,7 +27,8 @@ aside {
 
   & .main-nav li,
   & .my-music-nav li {
-    font-size: 0.95em;
+    // font-size: 0.95em;
+    font-size: calc(0.4vw + 0.5rem);
     font-weight: 400;
     padding: 0.45em 0 0.45em 3.5em;
     border-left: 0.3em solid #fff;
@@ -64,9 +65,10 @@ aside {
   }
 
   & h2 {
-    font-size: 1.125em;
+    // font-size: 1.125em;
+    font-size: calc(0.45vw + 0.5rem);
     color: #646464;
-    margin-left: 3em;
+    margin-left: 3.75em;
     margin-top: 2.5em;
   }
 
@@ -74,7 +76,7 @@ aside {
     margin-top: 0.95em;
   }
 
-  & .search-container {
+  & .search-icon {
     display: none;
   }
 }

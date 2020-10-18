@@ -1,12 +1,14 @@
 main {
   background-color: #fdfdfd;
-  width: 80vw;
+  width: 80%;
   padding-bottom: 400px; // don't forget to delete
+  font-size: 1rem;
 }
 
 main .header {
   max-width: 92%;
-  margin: 20px auto 0;
+  // margin: 20px auto 0;
+  margin: 1.25em auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,16 +18,21 @@ main .header {
     width: 25%;
 
     & input[type='text'] {
-      padding: 10px 50px;
-      border: 1px solid #ececec;
+      // padding: 10px 50px;
+      padding: 0.625em 3.125em;
+      border: 2px solid #ececec;
       border-radius: 5px;
       width: 100%;
-      font-size: 12px;
+      // font-size: 12px;
+      font-size: calc(0.3vw + 0.5rem);
       color: #a8a8a8;
+      transition: border 0.2s;
     }
 
     & input[type='text']:focus {
       outline: none;
+      border: 2px solid lighten($primary-color-light, 20%);
+      box-shadow: 0 0 1px 0 lighten($primary-color-light, 20%);
     }
 
     & input[type='text']::placeholder {
@@ -40,8 +47,11 @@ main .header {
     & img {
       position: absolute;
       top: 50%;
-      left: 20px;
+      // left: 20px;
+      // left: 1.25em;
+      left: calc(0.5vw + 0.5rem);
       transform: translateY(-50%);
+      width: calc(0.35vw + 0.5rem);
     }
   }
 
@@ -52,12 +62,15 @@ main .header {
     width: 12.5%;
 
     & button img {
-      width: 20px;
+      // width: 20px;
+      // width: 1.25em;
+      width: calc(0.75vw + 0.5rem);
     }
 
     & button.user {
       & img {
-        width: 45px;
+        // width: 45px;
+        width: calc(2vw + 0.5rem);
       }
     }
   }
@@ -68,28 +81,33 @@ main .discover {
   margin: 0 auto;
 
   & h2 {
-    margin-top: 32px;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    // margin-top: 32px;
+    margin-top: 1em;
+    // font-size: 24px;
+    font-size: calc(1vw + 0.5rem);
     color: #333;
   }
 
   & .preview-container {
-    margin-top: 15px;
+    // margin-top: 15px;
+    margin-top: 0.9em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     & .song-container {
-      width: 17.5%;
+      width: 18%;
 
       & .song-cover {
         cursor: pointer;
-        height: 25vh;
-        max-width: 100%;
+        width: 100%;
         border-radius: 5px;
         position: relative;
+
+        & img {
+          width: 100%;
+          border-radius: 5px;
+        }
 
         &::before {
           content: '';
@@ -110,12 +128,11 @@ main .discover {
         &::after {
           content: '';
           position: absolute;
-          // visibility: hidden;
           opacity: 0;
           top: 0;
           left: 0;
           right: 0;
-          bottom: 0;
+          bottom: 2%;
           background-color: rgba(0, 0, 0, 0.25);
           border-radius: 5px;
           transition: opacity 0.2s;
@@ -128,37 +145,40 @@ main .discover {
         }
       }
 
-      &:nth-child(1) > .song-cover {
-        background: url('../images/OneRepublic - Rescue Me.jpg') center
-          center/cover no-repeat;
-      }
+      // &:nth-child(1) > .song-cover {
+      //   background: url('../images/OneRepublic - Rescue Me.jpg') center
+      //     center/cover no-repeat;
+      // }
 
-      &:nth-child(2) > .song-cover {
-        background: url('../images/Taylor Swift - ME! (feat. Brendon Urie).jpg')
-          center center/cover no-repeat;
-      }
+      // &:nth-child(2) > .song-cover {
+      //   background: url('../images/Taylor Swift - ME! (feat. Brendon Urie).jpg')
+      //     center center/cover no-repeat;
+      // }
 
-      &:nth-child(3) > .song-cover {
-        background: url('../images/Miike Snow - Genghis Khan.jpg') center
-          center/cover no-repeat;
-      }
-      &:nth-child(4) > .song-cover {
-        background: url('../images/The Weeknd - Blinding Lights.jpg') center
-          center/cover no-repeat;
-      }
-      &:nth-child(5) > .song-cover {
-        background: url('../images/The Chain Gang of 1974 - Bends ft. TWINKIDS.jpg')
-          center center/cover no-repeat;
-      }
+      // &:nth-child(3) > .song-cover {
+      //   background: url('../images/Miike Snow - Genghis Khan.jpg') center
+      //     center/cover no-repeat;
+      // }
+      // &:nth-child(4) > .song-cover {
+      //   background: url('../images/The Weeknd - Blinding Lights.jpg') center
+      //     center/cover no-repeat;
+      // }
+      // &:nth-child(5) > .song-cover {
+      //   background: url('../images/The Chain Gang of 1974 - Bends ft. TWINKIDS.jpg')
+      //     center center/cover no-repeat;
+      // }
 
       & h3 {
-        font-size: 17px;
-        margin-top: 10px;
+        // font-size: 17px;
+        font-size: calc(0.55vw + 0.5rem);
+        // margin-top: 5px;
+        margin-top: 0.33em;
         color: #333;
       }
 
       & h4 {
-        font-size: 15px;
+        // font-size: 15px;
+        font-size: calc(0.4vw + 0.5rem);
         color: $secondary-color-light;
       }
     }
@@ -167,7 +187,8 @@ main .discover {
 
 main .popular-media {
   max-width: 92%;
-  margin: 40px auto 0;
+  // margin: 40px auto 0;
+  margin: 2.5em auto 0;
   display: flex;
   justify-content: space-between;
 }
