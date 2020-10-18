@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.style.display = 'block';
+})
+
 // Variables
 // General
 const audio = document.getElementsByTagName('audio')[0];
