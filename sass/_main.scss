@@ -27,6 +27,9 @@ main .header {
       font-size: calc(0.3vw + 0.5rem);
       color: #a8a8a8;
       transition: border 0.2s;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
 
     & input[type='text']:focus {
