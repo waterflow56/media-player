@@ -43,13 +43,13 @@ main.videos-main .videos-container h3 {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main.videos-main .videos-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   main.videos-main .videos-container {
     grid-template-columns: repeat(2, 1fr);
   }
