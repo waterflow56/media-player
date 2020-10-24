@@ -70,6 +70,12 @@ header {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  header .search-container input[type='text'] {
+    padding: 0.5em 3.125em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   header .settings {
     width: 15%;
