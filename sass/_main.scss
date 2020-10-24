@@ -95,6 +95,7 @@ main.home-main .discover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: auto;
 
     & .song-container {
       width: 18%;
