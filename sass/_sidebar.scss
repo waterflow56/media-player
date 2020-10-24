@@ -81,29 +81,6 @@ aside {
   }
 }
 
-@media screen and (max-width: 768px) {
-  aside > a {
-    font-size: calc(0.1vw + 0.5rem);
-    margin: 2em 0 5em 3.5em;
-  }
-
-  aside .main-nav li,
-  aside .my-music-nav li {
-    font-size: calc(0.3vw + 0.5rem);
-    padding: 0.45em 0 0.45em 2em;
-  }
-
-  aside h2 {
-    font-size: calc(0.4vw + 0.5rem);
-    margin-left: 2em;
-    margin-top: 2.5em;
-  }
-
-  aside .my-music-nav {
-    margin-top: 0.5em;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   aside > a {
     font-size: calc(0.2vw + 0.5rem);
@@ -119,6 +96,29 @@ aside {
   aside h2 {
     font-size: calc(0.4vw + 0.5rem);
     margin-left: 3em;
+    margin-top: 2.5em;
+  }
+
+  aside .my-music-nav {
+    margin-top: 0.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  aside > a {
+    font-size: calc(0.1vw + 0.5rem);
+    margin: 2em 0 5em 3em;
+  }
+
+  aside .main-nav li,
+  aside .my-music-nav li {
+    font-size: calc(0.3vw + 0.5rem);
+    padding: 0.45em 0 0.45em 2em;
+  }
+
+  aside h2 {
+    font-size: calc(0.4vw + 0.5rem);
+    margin-left: 2em;
     margin-top: 2.5em;
   }
 

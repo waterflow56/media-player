@@ -49,8 +49,8 @@ main.videos-main .videos-container h3 {
   }
 }
 
-// @media screen and (max-width: 1024px) {
-//   main.videos-main .videos-container {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-// }
+@media screen and (max-width: 1024px) {
+  main.videos-main .videos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
