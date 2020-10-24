@@ -77,5 +77,9 @@ header {
 
   header .search-container {
     width: 30%;
+
+    & input[type='text'] {
+      padding: 0.5em 3.125em;
+    }
   }
 }
