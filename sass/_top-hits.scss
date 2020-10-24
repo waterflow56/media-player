@@ -61,3 +61,22 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .popular-media .top-hits .top-hit {
+    padding: 0.25em 0.75em !important;
+
+    & span {
+      padding-right: 1em !important;
+      font-size: calc(0.3vw + 0.5rem) !important;
+    }
+
+    & .song-info p:first-child {
+      font-size: calc(0.3vw + 0.5rem) !important;
+    }
+
+    & .song-info p:last-child {
+      font-size: calc(0.2vw + 0.5rem) !important;
+    }
+  }
+}
