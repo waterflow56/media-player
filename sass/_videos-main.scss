@@ -11,9 +11,9 @@ main.videos-main .videos-container {
   row-gap: 1em;
 }
 
-main.videos-main .videos-container .video {
-  // width: 100%;
-}
+// main.videos-main .videos-container .video {
+//   // width: 100%;
+// }
 
 main.videos-main .videos-container .video-container {
   position: relative;
@@ -41,4 +41,10 @@ main.videos-main .videos-container h3 {
   margin-top: 0.25em;
   font-size: calc(0.6vw + 0.5rem);
   text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+  main.videos-main .videos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
