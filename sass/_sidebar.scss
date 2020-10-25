@@ -3,7 +3,7 @@ aside {
   width: 20%;
   font-size: 1rem;
 
-  & > a {
+  & .aside-container > a {
     display: inline-block;
     text-decoration: none;
     font-size: calc(0.3vw + 0.5rem);
@@ -79,10 +79,14 @@ aside {
   & .search-icon {
     display: none;
   }
+
+  & .menu-icon {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-  aside > a {
+  aside .aside-container > a {
     font-size: calc(0.2vw + 0.5rem);
     margin: 2.5em 0 5em 3.75em;
   }
@@ -104,25 +108,98 @@ aside {
   }
 }
 
+// Mobile Phones
 @media only screen and (max-width: 768px) {
-  aside > a {
-    font-size: calc(0.1vw + 0.5rem);
-    margin: 2.75em 0 5em 3em;
+  aside {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // margin: 0 auto;
+    height: 7.5vh;
+    z-index: 10;
+  }
+
+  aside .aside-container {
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  aside .search-icon,
+  aside .menu-icon {
+    display: block;
+    // background: coral;
+  }
+
+  aside .aside-container > a {
+    font-size: calc(0.4vw + 0.5rem);
+    // margin: 2.75em 0 5em 3em;
+    margin: 0;
+  }
+
+  aside nav {
+    position: fixed;
+    top: 0;
+    left: 4%;
+    width: 92%;
+    display: none;
   }
 
   aside .main-nav li,
   aside .my-music-nav li {
-    font-size: calc(0.3vw + 0.5rem);
-    padding: 0.45em 0 0.45em 2em;
+    // font-size: calc(0.3vw + 0.5rem);
+    // padding: 0.45em 0 0.45em 2em;
+    width: 100%;
+    padding: 0;
+    background: coral;
+    border: none;
+
+    & img {
+      display: none;
+    }
+  }
+
+  aside .main-nav li.active {
+    border: none;
+    background: coral;
   }
 
   aside h2 {
-    font-size: calc(0.4vw + 0.5rem);
-    margin-left: 2em;
-    margin-top: 2.5em;
+    display: none;
   }
 
   aside .my-music-nav {
     margin-top: 0.5em;
+
+    & img {
+      display: none;
+    }
   }
+
+  // OLD STYLES
+  // aside > a {
+  //   font-size: calc(0.1vw + 0.5rem);
+  //   margin: 2.75em 0 5em 3em;
+  // }
+
+  // aside .main-nav li,
+  // aside .my-music-nav li {
+  //   font-size: calc(0.3vw + 0.5rem);
+  //   padding: 0.45em 0 0.45em 2em;
+  // }
+
+  // aside h2 {
+  //   font-size: calc(0.4vw + 0.5rem);
+  //   margin-left: 2em;
+  //   margin-top: 2.5em;
+  // }
+
+  // aside .my-music-nav {
+  //   margin-top: 0.5em;
+  // }
 }
