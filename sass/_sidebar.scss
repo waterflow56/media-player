@@ -116,13 +116,12 @@ aside {
     display: flex;
     align-items: center;
     width: 100%;
-    // margin: 0 auto;
     height: 7.5vh;
     z-index: 10;
   }
 
   aside .aside-container {
-    width: 92%;
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -138,7 +137,6 @@ aside {
 
   aside .aside-container > a {
     font-size: calc(0.4vw + 0.5rem);
-    // margin: 2.75em 0 5em 3em;
     margin: 0;
   }
 
@@ -153,7 +151,6 @@ aside {
   aside .main-nav li,
   aside .my-music-nav li {
     // font-size: calc(0.3vw + 0.5rem);
-    // padding: 0.45em 0 0.45em 2em;
     width: 100%;
     padding: 0;
     background: coral;
