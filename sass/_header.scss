@@ -78,6 +78,7 @@ header {
 @media screen and (max-width: 768px) {
   header {
     position: fixed;
+    display: none;
     top: 7.5vh;
     width: 100%;
     margin: 0;
@@ -110,6 +111,10 @@ header {
       display: none;
     }
   }
+
+  // header.show {
+  //   display: block;
+  // }
 
   // header.hide {
   //   display: none;

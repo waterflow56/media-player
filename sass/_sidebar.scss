@@ -137,7 +137,7 @@ aside {
   }
 
   aside nav {
-    // display: none;
+    display: none;
     position: fixed;
     top: 7.5vh;
     left: 0;
@@ -146,6 +146,10 @@ aside {
     z-index: 10;
     padding: 0 0 1.25em;
   }
+
+  // aside nav.show {
+  //   display: block;
+  // }
 
   // aside nav.hide {
   //   display: none;
