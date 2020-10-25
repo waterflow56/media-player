@@ -176,6 +176,21 @@ section.audio-player {
   }
 
   section.audio-player .audio-song-cover {
-    width: 4vw;
+    width: 4.75vw !important;
+  }
+
+  section.audio-player .controls {
+    width: 10% !important;
+    margin-left: 2.5% !important;
+    // background: coral;
+
+    & button.previous-btn img,
+    & button.next-btn img {
+      width: 1.75vw !important;
+    }
+
+    & button.play-btn img {
+      width: 2.75vw !important;
+    }
   }
 }
