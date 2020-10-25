@@ -132,7 +132,6 @@ section.audio-player {
 
     & .options {
       margin-left: auto;
-      // background: red;
       width: 15%;
       display: flex;
       align-items: center;
@@ -171,18 +170,17 @@ section.audio-player {
 
 @media only screen and (max-width: 1024px) {
   section.audio-player {
-    // height: 10%;
-    height: 6vw;
+    padding: 1vw 0;
+    height: 6vw !important;
   }
 
   section.audio-player .audio-song-cover {
-    width: 4.75vw !important;
+    width: 4.25vw !important;
   }
 
   section.audio-player .controls {
     width: 10% !important;
-    margin-left: 2.5% !important;
-    // background: coral;
+    margin-left: 3% !important;
 
     & button.previous-btn img,
     & button.next-btn img {
@@ -191,6 +189,24 @@ section.audio-player {
 
     & button.play-btn img {
       width: 2.75vw !important;
+    }
+  }
+
+  section.audio-player .progress-container,
+  section.audio-player .volume-progress-container {
+    height: 0.4vw !important;
+  }
+
+  section.audio-player .options {
+    width: 17.5% !important;
+
+    & button:first-of-type img {
+      height: 2vw !important;
+    }
+
+    & button:last-of-type img {
+      // height: 2.5vh;
+      height: 1.5vw !important;
     }
   }
 }
