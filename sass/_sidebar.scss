@@ -106,7 +106,7 @@ aside {
 // Mobile Phones
 @media only screen and (max-width: 768px) {
   aside {
-    position: sticky;
+    position: fixed;
     top: 0;
     display: flex;
     align-items: center;
@@ -167,7 +167,7 @@ aside {
     padding: 0.75em 0;
     margin: 0;
     border-left: none;
-    border-bottom: 3px solid $primary-color-light;
+    border-bottom: 2px solid $primary-color-light;
     cursor: pointer;
 
     & h3 {
@@ -182,16 +182,11 @@ aside {
   aside .main-nav li:hover,
   aside .my-music-nav li:hover {
     border-left: none;
-    background: red;
   }
 
   aside .main-nav li.active {
     border-left: none;
     background: #fff;
-  }
-
-  aside .main-nav li.active:hover {
-    background: red;
   }
 
   aside h2 {
