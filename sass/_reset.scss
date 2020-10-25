@@ -36,6 +36,10 @@ button {
   display: flex;
 }
 
+.hide {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;

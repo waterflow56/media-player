@@ -27,25 +27,20 @@ aside {
 
   & .main-nav li,
   & .my-music-nav li {
-    // font-size: 0.95em;
     font-size: calc(0.4vw + 0.5rem);
     font-weight: 400;
     padding: 0.45em 0 0.45em 3.5em;
     border-left: 0.3em solid #fff;
     margin-bottom: 0.33em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
   }
 
   & .main-nav li:hover,
   & .my-music-nav li:hover {
     border-left: 0.3em solid $primary-color-light;
-  }
-
-  & .main-nav li a,
-  & .my-music-nav li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
   }
 
   & .main-nav li.active {
@@ -118,6 +113,7 @@ aside {
     width: 100%;
     height: 7.5vh;
     z-index: 10;
+    // background: lightblue;
   }
 
   aside .aside-container {
@@ -141,29 +137,61 @@ aside {
   }
 
   aside nav {
+    // display: none;
     position: fixed;
-    top: 0;
-    left: 4%;
-    width: 92%;
-    display: none;
+    top: 7.5vh;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    padding: 0 0 1.25em;
+  }
+
+  // aside nav.hide {
+  //   display: none;
+  // }
+
+  aside .main-nav,
+  aside .my-music-nav {
+    width: 90%;
+    // background: lightblue;
+    margin: 0 auto;
+    text-align: center;
   }
 
   aside .main-nav li,
   aside .my-music-nav li {
-    // font-size: calc(0.3vw + 0.5rem);
+    display: block;
+    font-size: calc(1vw + 0.5rem);
     width: 100%;
-    padding: 0;
-    background: coral;
-    border: none;
+    padding: 0.75em 0;
+    margin: 0;
+    border-left: none;
+    border-bottom: 3px solid $primary-color-light;
+    cursor: pointer;
+
+    & h3 {
+      margin: 0;
+    }
 
     & img {
       display: none;
     }
   }
 
+  aside .main-nav li:hover,
+  aside .my-music-nav li:hover {
+    border-left: none;
+    background: red;
+  }
+
   aside .main-nav li.active {
-    border: none;
-    background: coral;
+    border-left: none;
+    background: #fff;
+  }
+
+  aside .main-nav li.active:hover {
+    background: red;
   }
 
   aside h2 {
@@ -171,7 +199,7 @@ aside {
   }
 
   aside .my-music-nav {
-    margin-top: 0.5em;
+    margin-top: 0;
 
     & img {
       display: none;
