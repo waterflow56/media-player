@@ -63,8 +63,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .popular-media .top-hits {
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  .popular-media .top-hits h2 {
+    font-size: calc(2.75vw + 0.5rem);
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+  }
+
   .popular-media .top-hits .top-hit {
     padding: 0.25em 0.75em !important;
+    // background: coral !important;
 
     & span {
       padding-right: 1em !important;
