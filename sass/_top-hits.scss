@@ -92,11 +92,11 @@
 
     & span {
       padding-right: 1em !important;
-      font-size: calc(1.25vw + 0.5rem) !important;
+      font-size: calc(1vw + 0.5rem) !important;
     }
 
     & .song-info p:first-child {
-      font-size: calc(1.5vw + 0.5rem) !important;
+      font-size: calc(1.25vw + 0.5rem) !important;
     }
 
     & .song-info p:last-child {
@@ -105,7 +105,7 @@
     }
 
     & button img {
-      width: calc(1.75vw + 0.5rem) !important;
+      width: calc(1.5vw + 0.5rem) !important;
     }
   }
 }
