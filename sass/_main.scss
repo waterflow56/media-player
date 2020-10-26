@@ -214,6 +214,8 @@ main.home-main .popular-media {
 @media only screen and (max-width: 768px) {
   main.home-main .discover h2 {
     font-size: calc(2.75vw + 0.5rem);
+    font-weight: 600;
+    letter-spacing: 0.3vw;
   }
 
   main.home-main .discover .preview-container {
