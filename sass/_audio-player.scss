@@ -37,7 +37,7 @@ section.audio-player {
       // }
 
       & .audio-song-cover {
-        height: 100%;
+        // height: 100%;
         width: auto;
         border-radius: 5px;
         background-color: #a7a7a7;
@@ -45,7 +45,8 @@ section.audio-player {
         //   center/cover no-repeat;
         // width: 17%;
         // width: 7vh;
-        width: 3.5vw;
+        width: 3vw;
+        height: 3vw;
       }
 
       & .audio-song-name {
@@ -176,6 +177,7 @@ section.audio-player {
 
   section.audio-player .audio-song-cover {
     width: 4.25vw !important;
+    height: 4.25vw !important;
   }
 
   section.audio-player .controls {
@@ -188,7 +190,7 @@ section.audio-player {
     }
 
     & button.play-btn img {
-      width: 2.75vw !important;
+      width: 2.75vw;
     }
   }
 
@@ -205,7 +207,6 @@ section.audio-player {
     }
 
     & button:last-of-type img {
-      // height: 2.5vh;
       height: 1.5vw !important;
     }
   }
@@ -213,16 +214,25 @@ section.audio-player {
 
 @media only screen and (max-width: 768px) {
   section.audio-player {
-    padding: 2vw 0;
-    height: 7.5vh !important;
+    padding: 0 !important;
+    height: 10vh !important;
+
+    & .player-container {
+      justify-content: space-between;
+    }
   }
 
   section.audio-player .audio-song-info {
     width: 80% !important;
+    // background: coral;
 
     & .audio-song-cover {
-      width: 7vw !important;
-      height: 7vw !important;
+      width: 8vw !important;
+      height: 8vw !important;
+    }
+
+    & .audio-song-name {
+      margin-left: calc(2vw + 0.5rem) !important;
     }
 
     & .audio-song-name h3 {
@@ -234,13 +244,26 @@ section.audio-player {
     }
   }
 
+  section.audio-player .controls {
+    width: 20% !important;
+    margin-left: 0 !important;
+    // background: red;
+  }
+
   section.audio-player .controls .previous-btn,
   section.audio-player .controls .next-btn {
     display: none;
   }
 
+  section.audio-player .controls .play-btn {
+    width: 100%;
+    text-align: end;
+    // background: lightblue;
+  }
+
   section.audio-player .controls .play-btn img {
-    width: 10% !important;
+    width: 7vw !important;
+    // height: 100% !important;
   }
 
   section.audio-player .progress-bar,
