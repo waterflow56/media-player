@@ -227,8 +227,8 @@ section.audio-player {
     // background: coral;
 
     & .audio-song-cover {
-      width: 8vw !important;
-      height: 8vw !important;
+      width: 3.25em !important;
+      height: 3.25em !important;
     }
 
     & .audio-song-name {
@@ -262,7 +262,7 @@ section.audio-player {
   }
 
   section.audio-player .controls .play-btn img {
-    width: 7vw !important;
+    width: 3.5em !important;
     // height: 100% !important;
   }
 
