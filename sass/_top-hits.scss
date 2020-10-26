@@ -79,20 +79,32 @@
   }
 
   .popular-media .top-hits .top-hit {
-    padding: 0.25em 0.75em !important;
+    padding: 0.75em 0.75em !important;
     // background: coral !important;
+    border-radius: 0 !important;
+    border-bottom: 3px solid $primary-color-light;
+    margin-bottom: 0.5em;
+
+    &:hover {
+      background: transparent !important;
+    }
 
     & span {
       padding-right: 1em !important;
-      font-size: calc(0.8vw + 0.5rem) !important;
+      font-size: calc(1.5vw + 0.5rem) !important;
     }
 
     & .song-info p:first-child {
-      font-size: calc(0.9vw + 0.5rem) !important;
+      font-size: calc(1.75vw + 0.5rem) !important;
     }
 
     & .song-info p:last-child {
-      font-size: calc(0.8vw + 0.5rem) !important;
+      // font-size: calc(0.8vw + 0.5rem) !important;
+      display: none;
+    }
+
+    & button img {
+      width: calc(1.5vw + 0.5rem) !important;
     }
   }
 }
