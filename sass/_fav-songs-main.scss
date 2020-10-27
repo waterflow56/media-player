@@ -61,8 +61,13 @@ main.fav-songs-main .flex {
 // }
 
 @media screen and (max-width: 768px) {
+  main.fav-songs-main {
+    margin: 0 auto;
+  }
+
   main.fav-songs-main h2 {
     display: block;
+    margin-top: 1em;
     font-size: calc(2.75vw + 0.5rem);
     font-weight: 600;
     letter-spacing: 0.1vw;
@@ -80,6 +85,9 @@ main.fav-songs-main .flex {
     padding: 1em 0 !important;
     // background: lightblue;
     // border-bottom: 2px solid coral;
+    border-radius: 0 !important;
+    border-bottom: 2px solid $primary-color-light;
+    margin-bottom: 0.4em;
   }
 
   main.fav-songs-main .flex .fav-song h3:nth-of-type(1) {
