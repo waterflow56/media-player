@@ -77,12 +77,16 @@ main.fav-songs-main .flex {
     display: none;
   }
 
+  main.fav-songs-main .flex .grid-content {
+    margin-top: 0.6em;
+  }
+
   main.fav-songs-main .flex .fav-song {
     width: 100%;
     display: flex !important;
     align-items: center;
     // background: lightblue;
-    padding: 1em 0 !important;
+    padding: 1.25em 0 !important;
     // background: lightblue;
     // border-bottom: 2px solid coral;
     border-radius: 0 !important;
