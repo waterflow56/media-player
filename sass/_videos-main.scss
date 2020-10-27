@@ -9,11 +9,11 @@ main.videos-main .videos-container {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5em;
   row-gap: 1em;
-}
 
-// main.videos-main .videos-container .video {
-//   // width: 100%;
-// }
+  & h2 {
+    display: none;
+  }
+}
 
 main.videos-main .videos-container .video-container {
   position: relative;
@@ -50,7 +50,37 @@ main.videos-main .videos-container h3 {
 }
 
 @media screen and (max-width: 768px) {
+  main.videos-main {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   main.videos-main .videos-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 1em;
+    row-gap: 1.5em;
+
+    & h2 {
+      display: block;
+      font-size: calc(2.75vw + 0.5rem);
+      font-weight: 600;
+      letter-spacing: 0.1vw;
+    }
+  }
+
+  main.videos-main .video {
+    width: 100%;
+  }
+
+  main.videos-main .video-container span {
+    top: 1em !important;
+    left: 1em !important;
+    font-size: calc(0.75vw + 0.5rem) !important;
+    padding: 0.25em 0.6em !important;
+  }
+
+  main.videos-main .videos-container h3 {
+    margin-top: 0.25em;
+    font-size: calc(1.75vw + 0.5rem);
   }
 }
