@@ -54,11 +54,11 @@ main.fav-songs-main .flex {
   }
 }
 
-// @media screen and (max-width: 1024px) {
-//   main.fav-songs-main .flex .grid-content .fav-song button img {
-//     width: 1.25vw;
-//   }
-// }
+@media screen and (max-width: 1024px) {
+  main.fav-songs-main .flex .grid-content .fav-song button img {
+    width: 1.25vw;
+  }
+}
 
 @media screen and (max-width: 768px) {
   main.fav-songs-main {
@@ -85,10 +85,7 @@ main.fav-songs-main .flex {
     width: 100%;
     display: flex !important;
     align-items: center;
-    // background: lightblue;
     padding: 1.5em 0 !important;
-    // background: lightblue;
-    // border-bottom: 2px solid coral;
     border-radius: 0 !important;
     border-bottom: 2px solid $primary-color-light;
     margin-bottom: 0.4em;
@@ -123,7 +120,6 @@ main.fav-songs-main .flex {
     margin-right: 0.5em;
 
     & img {
-      // width: 2.5vw !important;
       width: calc(1.5vw + 0.5rem) !important;
     }
   }
