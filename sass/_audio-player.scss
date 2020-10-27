@@ -215,7 +215,8 @@ section.audio-player {
 @media only screen and (max-width: 768px) {
   section.audio-player {
     padding: 0 !important;
-    height: 10vh !important;
+    // height: 10vh !important;
+    height: 4.75em !important;
 
     & .player-container {
       justify-content: space-between;
