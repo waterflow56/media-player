@@ -80,7 +80,8 @@
   }
 
   .popular-media .top-hits .top-hit {
-    padding: 0.75em 0.75em !important;
+    // padding: 0.5em 0.5em !important;
+    padding: 0.75em 0.5em !important;
     // background: coral !important;
     border-radius: 0 !important;
     border-bottom: 2px solid $primary-color-light;
@@ -91,12 +92,12 @@
     }
 
     & span {
-      padding-right: 1em !important;
-      font-size: calc(1.3vw + 0.5rem) !important;
+      padding-right: 0.5em !important;
+      font-size: calc(1.5vw + 0.5rem) !important;
     }
 
     & .song-info p:first-child {
-      font-size: calc(1.65vw + 0.5rem) !important;
+      font-size: calc(1.5vw + 0.5rem) !important;
     }
 
     & .song-info p:last-child {
@@ -104,7 +105,7 @@
     }
 
     & button img {
-      width: calc(1.75vw + 0.5rem) !important;
+      width: calc(1.5vw + 0.5rem) !important;
     }
   }
 }

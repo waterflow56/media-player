@@ -212,6 +212,10 @@ main.home-main .popular-media {
 }
 
 @media only screen and (max-width: 768px) {
+  main.home-main .discover {
+    width: 90%;
+  }
+
   main.home-main .discover h2 {
     font-size: calc(2.75vw + 0.5rem);
     font-weight: 600;
@@ -243,5 +247,6 @@ main.home-main .popular-media {
   main.home-main .popular-media {
     margin: 1.5em auto 0;
     flex-direction: column;
+    width: 90%;
   }
 }
