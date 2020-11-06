@@ -60,3 +60,59 @@ menuToggle.addEventListener('click', () => showToggle(menu));
 sectionToggles.forEach(listItem => listItem.addEventListener('click', () => showToggle(menu)));
 searchContainerToggle.addEventListener('click', () => showToggle(header));
 closeBtn.addEventListener('click', () => showToggle(header));
+
+
+// FETCHING DATA
+fetch('../src/data.json')
+  .then(res => res.json())
+  .then(data => {
+    // New Releases
+    data.newReleases.forEach(songInfo => {
+      const songsContainer = document.querySelector('.preview-container');
+      const songContainer = document.createElement('div');
+      const songCover = document.createElement('div');
+      const songImg = document.createElement('img');
+      const songName = document.createElement('h3');
+      const songArtist = document.createElement('h4');
+
+      songContainer.className = 'song-container';
+      songCover.className = 'song-cover';
+      songImg.src = songInfo.img;
+      songName.innerText = songInfo.name;
+      songArtist.innerText = songInfo.artist;
+      
+      songCover.appendChild(songImg);
+      songContainer.appendChild(songCover);
+      songContainer.appendChild(songName);
+      songContainer.appendChild(songArtist);
+      songsContainer.appendChild(songContainer);
+    })
+
+    // Today's Top Hits
+    data.topHits.forEach(topHitInfo => {
+      const topHitsContainer = document.querySelector('.top-hits-container');
+      const topHitContainer = document.createElement('div');
+      const position = document.createElement('span');
+      const songInfo = document.createElement('div');
+      const songName = document.createElement('p');
+      const songAlbum = document.createElement('p');
+      const likeBtn = document.createElement('button');
+      const likeIcon = document.createElement('img');
+
+      topHitContainer.className = 'top-hit';
+      position.innerText = topHitInfo.position + '.';
+      songInfo.className = 'song-info';
+      songName.innerText = `${topHitInfo.artist} - ${topHitInfo.name}`;
+      songAlbum.innerText = topHitInfo.album;
+      likeIcon.src = './assets/icons/LightMode/like.svg';
+
+      likeBtn.appendChild(likeIcon);
+      songInfo.appendChild(songName);
+      songInfo.appendChild(songAlbum);
+      topHitContainer.appendChild(position);
+      topHitContainer.appendChild(songInfo);
+      topHitContainer.appendChild(likeBtn);
+      topHitsContainer.appendChild(topHitContainer);
+    })
+  })
+  .catch(err => console.log(err));

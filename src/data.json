@@ -1,0 +1,80 @@
+{
+  "newReleases": [
+    {
+      "artist": "OneRepublic",
+      "name": "Rescue Me",
+      "img": "./assets/images/OneRepublic - Rescue Me.jpg"
+    },
+    {
+      "artist": "Taylor Swift",
+      "name": "ME!",
+      "img": "./assets/images/Taylor Swift - ME! (feat. Brendon Urie).jpg"
+    },
+    {
+      "artist": "Miike Snow",
+      "name": "Genghis Khan",
+      "img": "./assets/images/Miike Snow - Genghis Khan.jpg"
+    },
+    {
+      "artist": "The Weeknd",
+      "name": "Blinding Lights",
+      "img": "./assets/images/The Weeknd - Blinding Lights.jpg"
+    },
+    {
+      "artist": "The Killers",
+      "name": "The Man",
+      "img": "./assets/images/The Killers - The Man.jpg"
+    }
+  ],
+
+  "topHits": [
+    {
+      "position": 1,
+      "artist": "OneRepublic",
+      "name": "Rescue Me",
+      "album": "Human"
+    },
+    {
+      "position": 2,
+      "artist": "Miike Snow",
+      "name": "Genghis Khan",
+      "album": "iii"
+    },
+    {
+      "position": 3,
+      "artist": "The Killers",
+      "name": "The Man",
+      "album": "Wonderful Wonderful"
+    },
+    {
+      "position": 4,
+      "artist": "Capital Cities",
+      "name": "Safe and Sound",
+      "album": "In a Tidal Wave of Mystery"
+    },
+    {
+      "position": 5,
+      "artist": "Young the Giant",
+      "name": "Superposition",
+      "album": "Mirror Master"
+    },
+    {
+      "position": 6,
+      "artist": "Panic! At The Disco",
+      "name": "Into the Unknown",
+      "album": "Frozen 2 (Original Motion Picture Soundtrack)"
+    },
+    {
+      "position": 7,
+      "artist": "Maroon 5",
+      "name": "Cold",
+      "album": "Cold (feat. Future) - Single"
+    },
+    {
+      "position": 8,
+      "artist": "Miley Cyrus",
+      "name": "Mother's Daughter",
+      "album": "SHE IS COMING"
+    }
+  ]
+}
