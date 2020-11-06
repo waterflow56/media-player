@@ -69,7 +69,9 @@ fetch('../src/data.json', {
     'Content-Type': 'application/json'
   }
 })
-  .then(res => res.json())
+  .then(res => {
+    return res.json();
+  })
   .then(data => {
     // New Releases
     data.newReleases.forEach(songInfo => {
