@@ -63,15 +63,13 @@ closeBtn.addEventListener('click', () => showToggle(header));
 
 
 // FETCHING DATA
-fetch('../src/data.json', {
+window.fetch('../src/data.json', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
   }
 })
-  .then(res => {
-    return res.json();
-  })
+  .then(res => res.json())
   .then(data => {
     // New Releases
     data.newReleases.forEach(songInfo => {
