@@ -49,9 +49,8 @@ const menu = document.getElementById('menu');
 const menuToggle = document.getElementById('menu-toggle');
 const header = document.getElementById('header');
 const searchContainerToggle = document.getElementById('search-toggle');
+const closeBtn = document.getElementById('close-btn');
 
 menuToggle.addEventListener('click', () => menu.classList.toggle('show'));
-
-searchContainerToggle.addEventListener('click', () => {
-  header.classList.toggle('show');
-})
+searchContainerToggle.addEventListener('click', () => header.classList.toggle('show'));
+closeBtn.addEventListener('click', () => header.classList.toggle('show'));
