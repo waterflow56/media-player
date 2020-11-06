@@ -17,21 +17,20 @@
     <div class="container">
       <aside>
         <div class="aside-container">
-          <button class="search-icon">
+          <button class="search-icon" id="search-toggle">
             <img src="./assets/icons/LightMode/mobile/search-mobile.svg">
           </button>
   
           <a href="#"><h1 class="logo" id="logo">YOUTIFY</h1></a>
   
-          <button class="menu-icon">
+          <button class="menu-icon" id="menu-toggle">
             <img src="./assets/icons/LightMode/menu.svg">
           </button>
   
-          <!-- TOGGLE SHOW CLASS TO SHOW/HIDE NAV -->
-          <nav>
+          <nav id="menu">
             <div class="main-nav">
               <ul>
-                <li class="active">
+                <li class="active" id="home-main-toggle">
                     <img
                       id="home-icon"
                       src="./assets/icons/LightMode/home.svg"
@@ -39,7 +38,7 @@
                     />
                     <h3>Home</h3>
                 </li>
-                <li>
+                <li id="videos-main-toggle">
                     <img
                       id="videos-icon"
                       src="./assets/icons/LightMode/videos.svg"
@@ -54,7 +53,7 @@
     
             <div class="my-music-nav">
               <ul>
-                <li>
+                <li id="fav-songs-main-toggle">
                     <img
                       id="like-icon"
                       src="./assets/icons/LightMode/like.svg"
@@ -70,7 +69,7 @@
 
       <section class="content">
         <!-- TOGGLE SHOW CLASS TO SHOW/HIDE SEARCHBAR -->
-        <header>
+        <header id="header">
           <div class="search-container">
             <img src="./assets/icons/LightMode/search.svg"/>
             <input type="text" placeholder="Search for lyrics" />
@@ -313,7 +312,7 @@
         </main>
   
         <!-- Favorite Songs Main -->
-        <!-- <main class="fav-songs-main">
+        <main class="fav-songs-main">
           <div class="fav-songs-container">
             <h2>Favorite Songs</h2>
             <div class="flex">
@@ -356,10 +355,10 @@
               </div>
             </div>
           </div>
-        </main> -->
+        </main>
 
         <!-- Videos Main -->
-        <!-- <main class="videos-main">
+        <main class="videos-main">
           <div class="videos-container">
             <h2>Videos</h2>
             <div class="video">
@@ -411,7 +410,7 @@
               <h3>The Killers - The Man</h3>
             </div>
           </div>
-        </main> -->
+        </main>
       </section>
 
       <!-- Audio Player -->
@@ -478,6 +477,6 @@
       </section>
     </div>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

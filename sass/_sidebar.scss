@@ -36,6 +36,7 @@ aside {
     align-items: center;
     text-decoration: none;
     color: #333;
+    cursor: pointer;
   }
 
   & .main-nav li:hover,
@@ -43,7 +44,8 @@ aside {
     border-left: 0.3em solid $primary-color-light;
   }
 
-  & .main-nav li.active {
+  & .main-nav li.active,
+  & .my-music-nav li.active {
     border-left: 0.3em solid $primary-color-light;
     background: linear-gradient(90deg, rgba(84, 152, 255, 0.05), transparent);
   }
@@ -129,7 +131,6 @@ aside {
   aside .search-icon,
   aside .menu-icon {
     display: block;
-    // background: coral;
   }
 
   aside .aside-container > a {
@@ -188,11 +189,15 @@ aside {
   aside .main-nav li:hover,
   aside .my-music-nav li:hover {
     border-left: none;
+    // background: coral;
   }
 
-  aside .main-nav li.active {
+  aside .main-nav li.active,
+  aside .my-music-nav li.active {
     border-left: none;
-    background: #fff;
+    // background: rgba(84, 152, 255, 0.05);
+    color: #fff;
+    background-color: $primary-color-light;
   }
 
   aside h2 {

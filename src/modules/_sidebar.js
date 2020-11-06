@@ -1,10 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.style.display = 'block';
-})
-
-
 // SIDEBAR
 // Vars
+
 const homeMainToggle = document.getElementById('home-main-toggle');
 const videosMainToggle = document.getElementById('videos-main-toggle');
 const favSongsMainToggle = document.getElementById('fav-songs-main-toggle');
@@ -12,8 +8,10 @@ const homeMain = document.querySelector('main.home-main');
 const favSongsMain = document.querySelector('main.fav-songs-main');
 const videosMain = document.querySelector('main.videos-main');
 
+
 const toggleArr = [homeMainToggle, videosMainToggle, favSongsMainToggle];
 const mainArr = [homeMain, favSongsMain, videosMain];
+
 
 function toggleMainSection(toggleElement, mainElement) {
   toggleArr.forEach(toggleEl => {
@@ -33,25 +31,7 @@ function toggleMainSection(toggleElement, mainElement) {
   })
 }
 
-homeMainToggle.addEventListener('click', () => {
-  toggleMainSection(homeMainToggle, homeMain);
-});
-videosMainToggle.addEventListener('click', () => {
-  toggleMainSection(videosMainToggle, videosMain);
-});
-favSongsMainToggle.addEventListener('click', () => {
-  toggleMainSection(favSongsMainToggle, favSongsMain);
-});
 
-
-// SIDEBAR MOBILE
-const menu = document.getElementById('menu');
-const menuToggle = document.getElementById('menu-toggle');
-const header = document.getElementById('header');
-const searchContainerToggle = document.getElementById('search-toggle');
-
-menuToggle.addEventListener('click', () => menu.classList.toggle('show'));
-
-searchContainerToggle.addEventListener('click', () => {
-  header.classList.toggle('show');
-})
+homeMainToggle.addEventListener('click', toggleMainSection(homeMainToggle, homeMain));
+videosMainToggle.addEventListener('click', toggleMainSection(videosMainToggle, videosMain));
+favSongsMainToggle.addEventListener('click', toggleMainSection(favSongsMainToggle, favSongsMain));
