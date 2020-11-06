@@ -63,7 +63,7 @@ closeBtn.addEventListener('click', () => showToggle(header));
 
 
 // FETCHING DATA
-window.fetch('../src/data.json', {
+window.fetch('./data.json', {
   method: 'GET'
 })
   .then(res => res.json())
