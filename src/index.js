@@ -63,7 +63,12 @@ closeBtn.addEventListener('click', () => showToggle(header));
 
 
 // FETCHING DATA
-fetch('../src/data.json')
+fetch('../src/data.json', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
   .then(res => res.json())
   .then(data => {
     // New Releases
