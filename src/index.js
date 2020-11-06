@@ -50,7 +50,13 @@ const menuToggle = document.getElementById('menu-toggle');
 const header = document.getElementById('header');
 const searchContainerToggle = document.getElementById('search-toggle');
 const closeBtn = document.getElementById('close-btn');
+const sectionToggles = document.querySelectorAll('.section-toggle');
 
-menuToggle.addEventListener('click', () => menu.classList.toggle('show'));
-searchContainerToggle.addEventListener('click', () => header.classList.toggle('show'));
-closeBtn.addEventListener('click', () => header.classList.toggle('show'));
+function showToggle(element) {
+  element.classList.toggle('show');
+}
+
+menuToggle.addEventListener('click', () => showToggle(menu));
+sectionToggles.forEach(listItem => listItem.addEventListener('click', () => showToggle(menu)));
+searchContainerToggle.addEventListener('click', () => showToggle(header));
+closeBtn.addEventListener('click', () => showToggle(header));
