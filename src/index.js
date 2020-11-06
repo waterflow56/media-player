@@ -64,10 +64,7 @@ closeBtn.addEventListener('click', () => showToggle(header));
 
 // FETCHING DATA
 window.fetch('../src/data.json', {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json'
-  }
+  method: 'GET'
 })
   .then(res => res.json())
   .then(data => {
