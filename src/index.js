@@ -54,15 +54,17 @@ const sectionToggles = document.querySelectorAll('.section-toggle');
 
 function showToggle(element) {
   element.classList.toggle('show');
+}
+
+menuToggle.addEventListener('click', () => showToggle(menu));
+sectionToggles.forEach(listItem => listItem.addEventListener('click', () => {
+  showToggle(menu);
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: 'smooth'
   });
-}
-
-menuToggle.addEventListener('click', () => showToggle(menu));
-sectionToggles.forEach(listItem => listItem.addEventListener('click', () => showToggle(menu)));
+}));
 searchContainerToggle.addEventListener('click', () => showToggle(header));
 closeBtn.addEventListener('click', () => showToggle(header));
 
