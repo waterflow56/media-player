@@ -54,6 +54,11 @@ const sectionToggles = document.querySelectorAll('.section-toggle');
 
 function showToggle(element) {
   element.classList.toggle('show');
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
 }
 
 menuToggle.addEventListener('click', () => showToggle(menu));
