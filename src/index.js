@@ -79,7 +79,7 @@ window.fetch('./data.json', {
 
       songContainer.className = 'song-container';
       songCover.className = 'song-cover';
-      songImg.src = songInfo.img;
+      songImg.src = songInfo.imgURL;
       songName.innerText = songInfo.name;
       songArtist.innerText = songInfo.artist;
       
@@ -102,7 +102,7 @@ window.fetch('./data.json', {
       const likeIcon = document.createElement('img');
 
       topHitContainer.className = 'top-hit';
-      position.innerText = topHitInfo.position + '.';
+      position.innerText = getHitsPosition();
       songInfo.className = 'song-info';
       songName.innerText = `${topHitInfo.artist} - ${topHitInfo.name}`;
       songAlbum.innerText = topHitInfo.album;
@@ -115,6 +115,93 @@ window.fetch('./data.json', {
       topHitContainer.appendChild(songInfo);
       topHitContainer.appendChild(likeBtn);
       topHitsContainer.appendChild(topHitContainer);
+
+      function getHitsPosition() {
+        if (topHitInfo.position < 10) {
+          return '0'+ topHitInfo.position + '.';
+        } else {
+          return topHitInfo.position + '.';
+        }
+      }
+    })
+
+    // Videos Main
+    data.videosMain.forEach(videoInfo => {
+      const videosContainer = document.querySelector('.videos-container');
+      const videoWrapper = document.createElement('div');
+      const videoContainer = document.createElement('div');
+      const videoTimestamp = document.createElement('span');
+      // const videoControls = document.createElement('div');
+      const video = document.createElement('video');
+      const videoTitle = document.createElement('h3');
+
+      video.src = videoInfo.videoURL;
+      video.setAttribute('controls', true);
+      video.setAttribute('poster', videoInfo.videoPoster);
+      videoTimestamp.innerText = getFullVideoTimestamp();
+      videoContainer.className = 'video-container';
+      videoContainer.appendChild(videoTimestamp);
+      videoContainer.appendChild(video);
+      videoTitle.innerText = videoInfo.videoTitle;
+      videoWrapper.className = 'video';
+      videoWrapper.appendChild(videoContainer);
+      videoWrapper.appendChild(videoTitle);
+      videosContainer.appendChild(videoWrapper);
+
+      function getFullVideoTimestamp() {
+        // Get minutes
+        let mins = Math.floor(videoInfo.videoDuration / 60);
+        if (mins < 10) {
+          mins = '0' + String(mins);
+        }
+        // Get seconds
+        let secs = Math.floor(videoInfo.videoDuration % 60);
+        if (secs < 10) {
+          secs = '0' + String(secs);
+        }
+        return `${mins}:${secs}`
+      }
+    })
+
+    // Favorite Songs Main
+    data.favoriteSongsMain.forEach(songInfo => {
+      const songsContainer = document.querySelector('.grid-content');
+      const songContainer = document.createElement('div');
+      const songPosition = document.createElement('h3');
+      const songName = document.createElement('h3');
+      const nameDivider = document.createElement('span');
+      const songArtist = document.createElement('h3');
+      const songAlbum = document.createElement('h3');
+      const songAddedDate = document.createElement('h3');
+      const likeBtn = document.createElement('button');
+      const likeIcon = document.createElement('img');
+
+      songPosition.innerText = getSongsPosition();
+      songName.innerText = songInfo.name;
+      nameDivider.innerText = '-';
+      songArtist.innerText = songInfo.artist;
+      songAlbum.innerText = songInfo.album;
+      songAddedDate.innerText = songInfo.addedDate;
+      likeIcon.src = './assets/icons/LightMode/liked.svg';
+      songContainer.className = 'fav-song';
+
+      likeBtn.appendChild(likeIcon);
+      songContainer.appendChild(songPosition);
+      songContainer.appendChild(songName);
+      songContainer.appendChild(nameDivider);
+      songContainer.appendChild(songArtist);
+      songContainer.appendChild(songAlbum);
+      songContainer.appendChild(songAddedDate);
+      songContainer.appendChild(likeBtn);
+      songsContainer.appendChild(songContainer);
+
+      function getSongsPosition() {
+        if (songInfo.position < 10) {
+          return '0'+ songInfo.position + '.';
+        } else {
+          return songInfo.position + '.';
+        }
+      }
     })
   })
   .catch(err => console.log(err));

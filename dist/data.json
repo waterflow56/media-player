@@ -3,27 +3,27 @@
     {
       "artist": "OneRepublic",
       "name": "Rescue Me",
-      "img": "./assets/images/OneRepublic - Rescue Me.jpg"
+      "imgURL": "./assets/images/OneRepublic - Rescue Me.jpg"
     },
     {
       "artist": "Taylor Swift",
       "name": "ME!",
-      "img": "./assets/images/Taylor Swift - ME! (feat. Brendon Urie).jpg"
+      "imgURL": "./assets/images/Taylor Swift - ME! (feat. Brendon Urie).jpg"
     },
     {
       "artist": "Miike Snow",
       "name": "Genghis Khan",
-      "img": "./assets/images/Miike Snow - Genghis Khan.jpg"
+      "imgURL": "./assets/images/Miike Snow - Genghis Khan.jpg"
     },
     {
       "artist": "The Weeknd",
       "name": "Blinding Lights",
-      "img": "./assets/images/The Weeknd - Blinding Lights.jpg"
+      "imgURL": "./assets/images/The Weeknd - Blinding Lights.jpg"
     },
     {
       "artist": "The Killers",
       "name": "The Man",
-      "img": "./assets/images/The Killers - The Man.jpg"
+      "imgURL": "./assets/images/The Killers - The Man.jpg"
     }
   ],
 
@@ -75,6 +75,51 @@
       "artist": "Miley Cyrus",
       "name": "Mother's Daughter",
       "album": "SHE IS COMING"
+    },
+    {
+      "position": 9,
+      "artist": "Jaden",
+      "name": "On My Own",
+      "album": "Erys"
+    },
+    {
+      "position": 10,
+      "artist": "Cascada",
+      "name": "Last Christmas",
+      "album": "It's Christmas Time"
+    }
+  ],
+
+  "videosMain": [
+    {
+      "videoTitle": "The Killers - The Man",
+      "videoURL": "./assets/videos/The Killers - The Man.mp4",
+      "videoPoster": "./assets/images/poster-the-man.jpg",
+      "videoDuration": 222
+    }
+  ],
+
+  "favoriteSongsMain": [
+    {
+      "position": 1,
+      "name": "Into the Unknown",
+      "artist": "Panic! At The Disco",
+      "album": "Frozen 2 (Original Motio...",
+      "addedDate": "2020-01-27"
+    },
+    {
+      "position": 2,
+      "name": "On My Own",
+      "artist": "Jaden",
+      "album": "Erys",
+      "addedDate": "2020-05-10"
+    },
+    {
+      "position": 3,
+      "name": "The Man",
+      "artist": "The Killers",
+      "album": "Wonderful Wonderful",
+      "addedDate": "2019-11-15"
     }
   ]
 }

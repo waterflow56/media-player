@@ -8,20 +8,20 @@
 @import 'variables';
 
 // General styling
-@import 'sidebar';
-@import 'header';
+@import 'sidebar-section';
+@import 'header-section';
 @import 'content-section';
-@import 'main';
+@import 'discover-main';
 @import 'fav-songs-main';
 @import 'videos-main';
-@import 'video-player';
-@import 'top-hits';
+@import 'top-video-section';
+@import 'top-hits-section';
 
 // Audio player styling
 @import 'audio-player';
 
 // Dark Mode styling
-@import 'dark-mode';
+// @import 'dark-mode';
 
 // Responsive Design
 // @import 'mobile';

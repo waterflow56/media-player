@@ -86,9 +86,11 @@
     border-radius: 0 !important;
     border-bottom: 2px solid $primary-color-light;
     margin-bottom: 0.4em;
+    transition: color 0.2s !important;
 
     &:hover {
       background: transparent !important;
+      color: $primary-color-light;
     }
 
     & span {
