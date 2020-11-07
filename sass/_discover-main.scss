@@ -23,7 +23,7 @@ main.home-main .discover {
     // overflow-x: auto;
     // overflow-y: hidden;
     // white-space: nowrap;
-    overflow: hidden;
+    // overflow-y: hidden;
     // width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -36,13 +36,19 @@ main.home-main .discover {
       // display: inline-block;
       width: 18%;
       // margin-right: 2%;
+      transition: transform 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.025);
+      }
 
       &:last-of-type {
         margin-right: 0;
       }
 
       & .song-cover {
-        cursor: pointer;
+        // cursor: pointer;
         width: 100%;
         border-radius: 5px;
         position: relative;
@@ -166,6 +172,10 @@ main.home-main .popular-media {
 
     & h4 {
       font-size: calc(1vw + 0.5rem) !important;
+    }
+
+    &:hover {
+      transform: none !important;
     }
   }
 

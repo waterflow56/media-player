@@ -68,7 +68,7 @@ window.fetch('./data.json', {
 })
   .then(res => res.json())
   .then(data => {
-    // New Releases
+    // New Releases Data
     data.newReleases.forEach(songInfo => {
       const songsContainer = document.querySelector('.preview-container');
       const songContainer = document.createElement('div');
@@ -90,7 +90,7 @@ window.fetch('./data.json', {
       songsContainer.appendChild(songContainer);
     })
 
-    // Today's Top Hits
+    // Today's Top Hits Data
     data.topHits.forEach(topHitInfo => {
       const topHitsContainer = document.querySelector('.top-hits-container');
       const topHitContainer = document.createElement('div');
@@ -125,7 +125,7 @@ window.fetch('./data.json', {
       }
     })
 
-    // Videos Main
+    // Videos Main Data
     data.videosMain.forEach(videoInfo => {
       const videosContainer = document.querySelector('.videos-container');
       const videoWrapper = document.createElement('div');
@@ -163,7 +163,7 @@ window.fetch('./data.json', {
       }
     })
 
-    // Favorite Songs Main
+    // Favorite Songs Main Data
     data.favoriteSongsMain.forEach(songInfo => {
       const songsContainer = document.querySelector('.grid-content');
       const songContainer = document.createElement('div');
@@ -178,7 +178,9 @@ window.fetch('./data.json', {
 
       songPosition.innerText = getSongsPosition();
       songName.innerText = songInfo.name;
+      songName.className = 'name';
       nameDivider.innerText = '-';
+      songArtist.className = 'artist';
       songArtist.innerText = songInfo.artist;
       songAlbum.innerText = songInfo.album;
       songAddedDate.innerText = songInfo.addedDate;
@@ -203,5 +205,29 @@ window.fetch('./data.json', {
         }
       }
     })
+
+    // Loading Music
+    const audio = document.getElementById('audio');
+
+    document.querySelectorAll('.song-container').forEach(song => {
+      song.addEventListener('click', () => {
+        const songURL = `./assets/music/${song.querySelector('h4').innerText} - ${song.querySelector('h3').innerText}.mp3`;
+        audio.src = songURL;
+      })
+    });
+
+    document.querySelectorAll('.top-hit').forEach(song => {
+      song.addEventListener('click', () => {
+        const songURL = `./assets/music/${song.querySelector('.song-info').firstElementChild.innerText}.mp3`;
+        audio.src = songURL;
+      })
+    });
+
+    document.querySelectorAll('.fav-song').forEach(song => {
+      song.addEventListener('click', () => {
+        const songURL = `./assets/music/${song.querySelector('.artist').innerText} - ${song.querySelector('.name').innerText}.mp3`;
+        audio.src = songURL;
+      })
+    });
   })
   .catch(err => console.log(err));
