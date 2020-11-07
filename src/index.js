@@ -57,9 +57,8 @@ function showToggle(element) {
 }
 
 menuToggle.addEventListener('click', () => showToggle(menu));
-sectionToggles.forEach(listItem => listItem.addEventListener('click', (e) => {
+sectionToggles.forEach(listItem => listItem.addEventListener('click', () => {
   showToggle(menu);
-  // e.stopPropagation();
   window.scrollTo({
     top: 0,
     left: 0,
