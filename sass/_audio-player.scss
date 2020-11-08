@@ -269,10 +269,10 @@ section.audio-player {
   section.audio-player .controls {
     width: 20% !important;
     margin-left: 0 !important;
-    // position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
   }
 
   section.audio-player .controls .previous-btn,
@@ -284,8 +284,8 @@ section.audio-player {
     // width: 100% !important;
     // text-align: end !important; // delete chance 70%
     // margin-right: 0 !important;
-    // position: absolute !important;
-    // right: 0 !important;
+    position: absolute !important;
+    right: 0 !important;
     height: auto !important;
     width: auto !important;
 
