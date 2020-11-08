@@ -16,6 +16,10 @@ section.audio-player {
   transition: transform 0.2s;
   z-index: 50;
 
+  &.show {
+    transform: translateY(0%);
+  }
+
   & .player-container {
     display: flex;
     align-items: center;
@@ -88,11 +92,26 @@ section.audio-player {
           margin-left: 0;
         }
 
-        &.play-btn img {
-          // width: 38px;
+        &.play-btn {
+          background-color: $primary-color-light;
           width: 2.25vw;
-          // margin-left: 25px;
+          height: 2.25vw;
+          border-radius: 50%;
+          position: relative;
+
+          & i.fas {
+            position: absolute;
+            top: 50%;
+            left: 52.5%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: calc(0.4vw + 0.5rem);
+          }
         }
+
+        // &.play-btn img {
+        //   width: 2.25vw;
+        // }
       }
     }
 
@@ -189,9 +208,9 @@ section.audio-player {
       width: 1.75vw !important;
     }
 
-    & button.play-btn img {
-      width: 2.75vw;
-    }
+    // & button.play-btn img {
+    //   width: 2.75vw;
+    // }
   }
 
   section.audio-player .progress-container,
@@ -249,6 +268,7 @@ section.audio-player {
   section.audio-player .controls {
     width: 20% !important;
     margin-left: 0 !important;
+    position: relative;
   }
 
   section.audio-player .controls .previous-btn,
@@ -257,13 +277,23 @@ section.audio-player {
   }
 
   section.audio-player .controls .play-btn {
-    width: 100%;
-    text-align: end; // delete chance 70%
+    // width: 100% !important;
+    // text-align: end !important; // delete chance 70%
+    // margin-right: 0 !important;
+    position: absolute !important;
+    right: 0 !important;
+    height: 3.5em !important;
+    width: 3.5em !important;
+
+    & i.fas {
+      top: 51% !important;
+      font-size: calc(3vw + 0.5rem) !important;
+    }
   }
 
-  section.audio-player .controls .play-btn img {
-    width: 3.5em !important;
-  }
+  // section.audio-player .controls .play-btn img {
+  //   width: 3.5em !important;
+  // }
 
   section.audio-player .progress-bar,
   section.audio-player .options {

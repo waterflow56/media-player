@@ -27,13 +27,13 @@ main.fav-songs-main .flex {
 
   & .grid-content {
     font-size: calc(0.375vw + 0.5rem);
-    margin-top: 0.45em;
+    margin-top: 0.5em;
 
     & .fav-song {
       display: grid;
       grid-template-columns: 1fr 15fr 15fr 15fr 15fr 1fr;
       transition: color 0.2s;
-      padding: 0.4em 0;
+      padding: 0.5em 0;
     }
 
     & .fav-song:hover {

@@ -24,11 +24,15 @@
       // padding: 0.625em 1.25em;
       padding: 0.525em 1.125em;
       border-radius: 5px;
-      background: transparent;
+      background-color: transparent;
       transition: background 0.2s;
 
+      &.active {
+        background-color: #f4f4f4;
+      }
+
       &:hover {
-        background: #f4f4f4;
+        background-color: #f4f4f4;
       }
 
       & span {
@@ -90,7 +94,7 @@
     transition: color 0.2s !important;
 
     &:hover {
-      background: transparent !important;
+      background-color: transparent !important;
       color: $primary-color-light;
     }
 
