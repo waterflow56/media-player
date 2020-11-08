@@ -220,11 +220,16 @@ window.fetch('./data.json', {
     const songArtist = document.querySelector('.audio-song-name').querySelector('h3');
     const songCover = document.querySelector('.audio-song-cover');
     const playBtn = document.querySelector('.play-btn');
+    const playBtnIcon = document.getElementById('play-btn-icon');
 
     function playSong() {
       if (audio.paused) {
+        playBtnIcon.classList.remove('fa-play-circle');
+        playBtnIcon.classList.add('fa-pause-circle');
         audio.play();
       } else {
+        playBtnIcon.classList.remove('fa-pause-circle');
+        playBtnIcon.classList.add('fa-play-circle');
         audio.pause();
       }
     }
