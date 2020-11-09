@@ -223,6 +223,12 @@ window.fetch('./data.json', {
     const audioDuration = document.getElementById('audio-duration');
     const currentAudioProgress = document.getElementById('current-audio-progress');
 
+    const progressContainer = document.querySelector('.progress-container');
+    const progress = document.querySelector('.progress');
+
+    let topHitsArr = [];
+    let favSongsArr = [];
+
     function playSong() {
       if (audio.paused) {
         playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
@@ -258,8 +264,6 @@ window.fetch('./data.json', {
       return `${mins}:${secs}`;
     }
 
-    let topHitsArr = [];
-    let favSongsArr = [];
     function toggleActive(currentElem, currentElemArr, secondElemArr) {
       currentElemArr.forEach(elem => {
         if (elem == currentElem) {
@@ -274,6 +278,14 @@ window.fetch('./data.json', {
       })
     }
 
+    // Set progress
+    function setProgress(e) {
+      const width = this.clientWidth;
+      const clickX = e.offsetX;
+      const duration = audio.duration;
+      audio.currentTime = (clickX / width) * duration;
+    }
+
     document.querySelectorAll('.song-container').forEach(song => {
       song.addEventListener('click', () => {
         const songArtist = song.querySelector('h4').innerText;
@@ -286,7 +298,6 @@ window.fetch('./data.json', {
       })
     });
 
-    // let topHitsArr = [];
     document.querySelectorAll('.top-hit').forEach(song => {
       topHitsArr.push(song);
       song.addEventListener('click', () => {
@@ -304,7 +315,6 @@ window.fetch('./data.json', {
       })
     });
 
-    // let favSongsArr = [];
     document.querySelectorAll('.fav-song').forEach(song => {
       favSongsArr.push(song);
       song.addEventListener('click', () => {
@@ -325,9 +335,12 @@ window.fetch('./data.json', {
     });
     audio.addEventListener('timeupdate', () => {
       currentAudioProgress.innerText = getAudioTime('currentTime');
+      const progressPercent = (audio.currentTime / audio.duration) * 100;
+      progress.style.width = `${progressPercent}%`;
     });
     audio.addEventListener('ended', () => {
       playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
-    })
+    });
+    progressContainer.addEventListener('click', setProgress);
   })
   .catch(err => console.log(err));
