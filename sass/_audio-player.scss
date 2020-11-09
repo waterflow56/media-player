@@ -92,27 +92,32 @@ section.audio-player {
           margin-left: 0;
         }
 
-        &.play-btn {
-          // background-color: $primary-color-light;
-          width: auto;
-          height: auto;
-          border-radius: 50%;
-          position: relative;
+        // &.previous-btn,
+        // &.next-btn {
+        //   width: auto;
+        //   height: auto;
 
-          & i.fas {
-            // position: absolute;
-            // top: 50%;
-            // left: 52.5%;
-            // transform: translate(-50%, -50%);
-            // color: #fff;
-            color: $primary-color-light;
-            font-size: calc(2vw + 0.5rem);
-          }
-        }
-
-        // &.play-btn img {
-        //   width: 2.25vw;
+        //   & i.fas {
+        //     color: #ababab;
+        //     font-size: calc(1.25vw + 0.5rem);
+        //   }
         // }
+
+        // &.play-btn {
+        //   width: auto;
+        //   height: auto;
+        //   border-radius: 50%;
+        //   // position: relative;
+
+        //   & i.fas {
+        //     color: $primary-color-light;
+        //     font-size: calc(2vw + 0.5rem);
+        //   }
+        // }
+
+        &.play-btn img {
+          width: 2.25vw;
+        }
       }
     }
 
@@ -269,7 +274,7 @@ section.audio-player {
   section.audio-player .controls {
     width: 20% !important;
     margin-left: 0 !important;
-    position: relative;
+    // position: relative;
     // display: flex;
     // justify-content: center;
     // align-items: center;
@@ -280,24 +285,28 @@ section.audio-player {
     display: none;
   }
 
-  section.audio-player .controls .play-btn {
-    // width: 100% !important;
-    // text-align: end !important; // delete chance 70%
-    // margin-right: 0 !important;
-    position: absolute !important;
-    right: 0 !important;
-    height: auto !important;
-    width: auto !important;
+  // section.audio-player .controls .play-btn {
+  //   // width: 100% !important;
+  //   // text-align: end !important; // delete chance 70%
+  //   // margin-right: 0 !important;
+  //   position: absolute !important;
+  //   right: 0 !important;
+  //   height: auto !important;
+  //   width: auto !important;
 
-    & i.fas {
-      // top: 51% !important;
-      font-size: 3.9em !important;
-    }
+  //   & i.fas {
+  //     // top: 51% !important;
+  //     font-size: 3.9em !important;
+  //   }
+  // }
+  section.audio-player .controls .play-btn {
+    width: 100%;
+    text-align: end;
   }
 
-  // section.audio-player .controls .play-btn img {
-  //   width: 3.5em !important;
-  // }
+  section.audio-player .controls .play-btn img {
+    width: 3.5em !important;
+  }
 
   section.audio-player .progress-bar,
   section.audio-player .options {

@@ -1,7 +1,5 @@
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.style.display = 'block';
-})
-
+// Content Loaded
+import './modules/_dark-mode.js';
 
 // SIDEBAR
 // Vars
@@ -222,20 +220,24 @@ window.fetch('./data.json', {
     const playBtn = document.querySelector('.play-btn');
     const playBtnIcon = document.getElementById('play-btn-icon');
 
+    const audioDuration = document.getElementById('audio-duration');
+    const currentAudioProgress = document.getElementById('current-audio-progress');
+
     function playSong() {
       if (audio.paused) {
-        playBtnIcon.classList.remove('fa-play-circle');
-        playBtnIcon.classList.add('fa-pause-circle');
+        playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
         audio.play();
       } else {
-        playBtnIcon.classList.remove('fa-pause-circle');
-        playBtnIcon.classList.add('fa-play-circle');
+        playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
         audio.pause();
       }
     }
 
     function loadSongInfo(artist, name, song, cover) {
       audio.src = song;
+      audio.addEventListener('loadedmetadata', () => {
+        audioDuration.innerText = getAudioTime('duration');
+      });
       songName.innerText = name;
       songArtist.innerText = artist;
       songCover.style.background = `url('${cover}') no-repeat center center/cover`;
@@ -243,6 +245,19 @@ window.fetch('./data.json', {
         audioPlayerSection.classList.add('show');
       }
     }
+
+    function getAudioTime(timeProgress) {
+      let mins = Math.floor(audio[timeProgress] / 60);
+      if (mins < 10) {
+        mins = '0' + String(mins);
+      }
+      let secs = Math.floor(audio[timeProgress] % 60);
+      if (secs < 10) {
+        secs = '0' + String(secs);
+      }
+      return `${mins}:${secs}`;
+    }
+
     let topHitsArr = [];
     let favSongsArr = [];
     function toggleActive(currentElem, currentElemArr, secondElemArr) {
@@ -307,6 +322,12 @@ window.fetch('./data.json', {
 
     playBtn.addEventListener('click', () => {
       playSong();
+    });
+    audio.addEventListener('timeupdate', () => {
+      currentAudioProgress.innerText = getAudioTime('currentTime');
+    });
+    audio.addEventListener('ended', () => {
+      playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
     })
   })
   .catch(err => console.log(err));
