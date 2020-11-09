@@ -93,9 +93,14 @@
     // margin-bottom: 0.4em;
     transition: color 0.2s !important;
 
-    &:hover {
+    &.active {
       background-color: transparent !important;
-      color: $primary-color-light;
+    }
+
+    &:hover {
+      // background-color: transparent !important;
+      // color: $primary-color-light;
+      background-color: transparent !important;
     }
 
     & span {
