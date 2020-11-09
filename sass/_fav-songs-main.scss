@@ -128,9 +128,9 @@ main.fav-songs-main .flex {
     border-bottom: 2px solid $primary-color-light;
     margin-bottom: 0.4em;
 
-    &:hover {
-      color: initial !important;
-    }
+    // &:hover {
+    //   color: initial !important;
+    // }
   }
 
   main.fav-songs-main .flex .fav-song h3:nth-of-type(1) {
