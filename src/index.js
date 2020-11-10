@@ -67,12 +67,12 @@ searchContainerToggle.addEventListener('click', () => showToggle(header));
 closeBtn.addEventListener('click', () => showToggle(header));
 
 
-// FETCHING DATA
 window.fetch('./data.json', {
   method: 'GET'
 })
   .then(res => res.json())
   .then(data => {
+    // FETCHING DATA
     // New Releases Data
     data.newReleases.forEach(songInfo => {
       const songsContainer = document.querySelector('.preview-container');
@@ -210,8 +210,9 @@ window.fetch('./data.json', {
         }
       }
     })
-
-    // Loading Music
+  })
+  .then(data => {
+    // LOADING MUSIC
     const audioPlayerSection = document.querySelector('.audio-player');
     const audio = document.getElementById('audio');
     const songName = document.querySelector('.audio-song-name').querySelector('h4');
