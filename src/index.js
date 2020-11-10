@@ -229,6 +229,12 @@ window.fetch('./data.json', {
     let topHitsArr = [];
     let favSongsArr = [];
 
+    const repeatBtn = document.getElementById('repeat-btn');
+    const volumeBtn = document.getElementById('volume-btn');
+    const volumeContainer = document.querySelector('.volume-progress-container')
+    const volumeProgress = document.querySelector('.volume-progress');
+    let volumeBuff;
+
     function playSong() {
       if (audio.paused) {
         playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
@@ -278,12 +284,57 @@ window.fetch('./data.json', {
       })
     }
 
-    // Set progress
+    function repeatToggle() {
+      if (!repeatBtn.classList.contains('repeat-on')) {
+        repeatBtn.querySelector('img').src = './assets/icons/LightMode/repeat-on.svg';
+        repeatBtn.classList.add('repeat-on');
+        audio.addEventListener('ended', playSong);
+      } else {
+        repeatBtn.querySelector('img').src = './assets/icons/LightMode/repeat-off.svg';
+        repeatBtn.classList.remove('repeat-on');
+        audio.removeEventListener('ended', playSong);
+      }
+    }
+
+    function muteAudio() {
+      if (!volumeBtn.classList.contains('muted')) {
+        volumeBtn.classList.add('muted');
+        volumeBuff = audio.volume;
+        audio.volume = 0;
+        volumeBtn.querySelector('img').src = './assets/icons/LightMode/muted.svg';
+      } else {
+        volumeBtn.classList.remove('muted');
+        audio.volume = volumeBuff;
+        setVolumeIcon();
+      }
+    }
+
     function setProgress(e) {
       const width = this.clientWidth;
       const clickX = e.offsetX;
       const duration = audio.duration;
       audio.currentTime = (clickX / width) * duration;
+    }
+
+    function setVolume(e) {
+      const width = this.clientWidth;
+      const clickX = e.offsetX;
+      audio.volume = clickX / width;
+      volumeProgress.style.width = `${(clickX / width) * 100}%`;
+      if (volumeBtn.classList.contains('muted')) {
+        volumeBtn.classList.remove('muted');
+      }
+      setVolumeIcon();
+    }
+
+    function setVolumeIcon() {
+      if (audio.volume >= 0.75) {
+        volumeBtn.querySelector('img').src = './assets/icons/LightMode/high-volume.svg';
+      } else if (audio.volume > 0.25 && audio.volume < 0.75) {
+        volumeBtn.querySelector('img').src = './assets/icons/LightMode/medium-volume.svg';
+      } else if (audio.volume <= 0.25) {
+        volumeBtn.querySelector('img').src = './assets/icons/LightMode/low-volume.svg';
+      }
     }
 
     document.querySelectorAll('.song-container').forEach(song => {
@@ -330,9 +381,12 @@ window.fetch('./data.json', {
       })
     });
 
-    playBtn.addEventListener('click', () => {
-      playSong();
-    });
+    // Event Listeners
+    playBtn.addEventListener('click', playSong);
+    progressContainer.addEventListener('click', setProgress);
+    volumeContainer.addEventListener('click', setVolume);
+    repeatBtn.addEventListener('click', repeatToggle);
+    volumeBtn.addEventListener('click', muteAudio);
     audio.addEventListener('timeupdate', () => {
       currentAudioProgress.innerText = getAudioTime('currentTime');
       const progressPercent = (audio.currentTime / audio.duration) * 100;
@@ -341,6 +395,5 @@ window.fetch('./data.json', {
     audio.addEventListener('ended', () => {
       playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
     });
-    progressContainer.addEventListener('click', setProgress);
   })
   .catch(err => console.log(err));

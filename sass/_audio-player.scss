@@ -272,7 +272,8 @@ section.audio-player {
   }
 
   section.audio-player .controls {
-    width: 20% !important;
+    // width: 20% !important;
+    width: auto !important;
     margin-left: 0 !important;
     // position: relative;
     // display: flex;
@@ -300,8 +301,8 @@ section.audio-player {
   //   }
   // }
   section.audio-player .controls .play-btn {
-    width: 100%;
-    text-align: end;
+    width: auto;
+    // text-align: end;
   }
 
   section.audio-player .controls .play-btn img {
