@@ -120,14 +120,15 @@ main.fav-songs-main .flex {
   }
 
   main.fav-songs-main .flex .fav-song {
-    font-size: calc(1.75vw + 0.5rem);
+    // font-size: calc(1.75vw + 0.5rem);
+    font-size: calc(3.4vw + 0.1rem);
     width: 100%;
     display: flex !important;
     align-items: center;
     // padding: 1.5em 0 !important;
     // padding: 0 !important;
-    padding: 1em 0.25em !important;
-    white-space: nowrap;
+    padding: 1em 0.4em !important;
+    // white-space: nowrap;
 
     border-radius: 0 !important;
     border-bottom: 2px solid $primary-color-light;
@@ -139,19 +140,22 @@ main.fav-songs-main .flex {
   }
 
   main.fav-songs-main .flex .fav-song h3:nth-of-type(1) {
-    font-size: calc(1.5vw + 0.5rem);
+    // font-size: calc(1.5vw + 0.5rem);
+    font-size: calc(3.25vw + 0.1rem);
     // padding: 0 0.5em;
-    margin-right: 0.25em !important;
+    margin-right: 0.4em !important;
     width: auto !important;
   }
 
   main.fav-songs-main .flex .fav-song h3:nth-of-type(2) {
-    font-size: calc(1.5vw + 0.5rem);
+    // font-size: calc(1.5vw + 0.5rem);
+    font-size: calc(3.25vw + 0.1rem);
     width: auto !important;
   }
 
   main.fav-songs-main .flex .fav-song h3:nth-of-type(3) {
-    font-size: calc(1.5vw + 0.5rem);
+    // font-size: calc(1.5vw + 0.5rem);
+    font-size: calc(3.25vw + 0.1rem);
     width: auto !important;
   }
 
@@ -163,7 +167,8 @@ main.fav-songs-main .flex {
   main.fav-songs-main .flex .fav-song span {
     width: auto !important;
     display: block !important;
-    font-size: calc(1.5vw + 0.5rem);
+    // font-size: calc(1.5vw + 0.5rem);
+    font-size: calc(3.25vw + 0.1rem);
     margin: 0 0.25em;
   }
 
@@ -173,7 +178,8 @@ main.fav-songs-main .flex {
     // margin-right: 0.5em;
 
     & img {
-      width: calc(1.5vw + 0.5rem) !important;
+      // width: calc(1.5vw + 0.5rem) !important;
+      width: calc(3.25vw + 0.1rem) !important;
     }
   }
 

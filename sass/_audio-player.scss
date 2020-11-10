@@ -4,10 +4,7 @@ section.audio-player {
   bottom: 0;
   box-shadow: 0 -5px 25px 1px rgba(0, 0, 0, 0.1);
   background: #fff;
-  // padding: 15px 0;
-  // padding: 1.5vh 0;
   padding: 0.75vw 0;
-  // height: 10%;
   height: 4.5vw;
   display: flex;
   justify-content: center;
@@ -23,7 +20,6 @@ section.audio-player {
   & .player-container {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
     margin: 0 auto;
     width: 90%;
     height: 100%;
@@ -34,36 +30,24 @@ section.audio-player {
       height: 100%;
       width: 20%;
 
-      // & img {
-      //   border-radius: 5px;
-      //   // width: 50px;
-      //   height: 100%;
-      // }
-
       & .audio-song-cover {
-        // height: 100%;
-        // width: auto;
         border-radius: 5px;
         background-color: #a7a7a7;
-        // background: url('./assets/images/cover-placeholder.jpg') center
-        //   center/cover no-repeat;
-        // width: 17%;
-        // width: 7vh;
         width: 3vw;
         height: 3vw;
       }
 
       & .audio-song-name {
-        margin-left: calc(0.5vw + 0.5rem);
-        // width: 50%;
+        margin-left: calc(0.8vw + 0.1rem);
 
         & h3 {
-          font-size: calc(0.5vw + 0.5rem);
+          font-size: calc(0.925vw + 0.1rem);
         }
 
         & h4 {
           color: $secondary-color-light;
-          font-size: calc(0.4vw + 0.5rem);
+          // font-size: calc(0.4vw + 0.5rem);
+          font-size: calc(0.825vw + 0.1rem);
         }
       }
     }
@@ -72,10 +56,6 @@ section.audio-player {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // width: 125px;
-      // width: auto;
-      // margin: 0 4% 0 2.5%;
-      // margin: 0 5%;
       margin-left: 5%;
       height: 100%;
       width: 8%;
@@ -83,37 +63,12 @@ section.audio-player {
       & button {
         &.previous-btn img,
         &.next-btn img {
-          // width: 18px;
           width: 1.25vw;
-          // margin-left: 25px;
         }
 
         &.previous-btn img {
           margin-left: 0;
         }
-
-        // &.previous-btn,
-        // &.next-btn {
-        //   width: auto;
-        //   height: auto;
-
-        //   & i.fas {
-        //     color: #ababab;
-        //     font-size: calc(1.25vw + 0.5rem);
-        //   }
-        // }
-
-        // &.play-btn {
-        //   width: auto;
-        //   height: auto;
-        //   border-radius: 50%;
-        //   // position: relative;
-
-        //   & i.fas {
-        //     color: $primary-color-light;
-        //     font-size: calc(2vw + 0.5rem);
-        //   }
-        // }
 
         &.play-btn img {
           width: 2.25vw;
@@ -127,12 +82,10 @@ section.audio-player {
       justify-content: space-between;
       width: 40%;
       margin: 0 6%;
-      // margin-left: 60px;
-      // background: orange;
 
       & h3 {
-        // font-size: 14px;
-        font-size: calc(0.4vw + 0.5rem);
+        // font-size: calc(0.4vw + 0.5rem);
+        font-size: calc(0.8vw + 0.1rem);
       }
 
       & .progress-container {
@@ -162,22 +115,18 @@ section.audio-player {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // margin: 0;
 
       & button:first-of-type img {
-        // height: 3vh;
         height: 1.5vw;
       }
 
       & button:last-of-type img {
-        // height: 2.5vh;
         height: 1.25vw;
       }
 
       & .volume-progress-container {
         width: 55%;
         background-color: #ababab;
-        // height: 5px;
         height: 0.3vw;
         border-radius: 5px;
         cursor: pointer;
@@ -241,7 +190,6 @@ section.audio-player {
 @media only screen and (max-width: 768px) {
   section.audio-player {
     padding: 0 !important;
-    // height: 10vh !important;
     height: 4.75em !important;
 
     & .player-container {
@@ -258,27 +206,24 @@ section.audio-player {
     }
 
     & .audio-song-name {
-      margin-left: calc(2vw + 0.5rem) !important;
+      margin-left: calc(3.5vw + 0.1rem) !important;
     }
 
     & .audio-song-name h3 {
-      font-size: calc(1.75vw + 0.5rem) !important;
+      // font-size: calc(1.75vw + 0.5rem) !important;
+      font-size: calc(3.75vw + 0.1rem) !important;
       margin-bottom: 0.15em;
     }
 
     & .audio-song-name h4 {
-      font-size: calc(1.5vw + 0.5rem) !important;
+      // font-size: calc(1.5vw + 0.5rem) !important;
+      font-size: calc(3.25vw + 0.1rem) !important;
     }
   }
 
   section.audio-player .controls {
-    // width: 20% !important;
     width: auto !important;
     margin-left: 0 !important;
-    // position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
   }
 
   section.audio-player .controls .previous-btn,
@@ -286,23 +231,8 @@ section.audio-player {
     display: none;
   }
 
-  // section.audio-player .controls .play-btn {
-  //   // width: 100% !important;
-  //   // text-align: end !important; // delete chance 70%
-  //   // margin-right: 0 !important;
-  //   position: absolute !important;
-  //   right: 0 !important;
-  //   height: auto !important;
-  //   width: auto !important;
-
-  //   & i.fas {
-  //     // top: 51% !important;
-  //     font-size: 3.9em !important;
-  //   }
-  // }
   section.audio-player .controls .play-btn {
     width: auto;
-    // text-align: end;
   }
 
   section.audio-player .controls .play-btn img {

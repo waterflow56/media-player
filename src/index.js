@@ -186,21 +186,21 @@ window.fetch('./data.json', {
       songName.className = 'name';
       nameDivider.innerText = '-';
       songArtist.className = 'artist';
-      // songArtist.innerText = songInfo.artist;
+      songArtist.innerText = songInfo.artist;
       songAlbum.innerText = songInfo.album;
       songAddedDate.innerText = songInfo.addedDate;
       likeIcon.src = './assets/icons/LightMode/liked.svg';
       songContainer.className = 'fav-song';
       // Slice artist if total row length is more than 38 chars
-      if (songInfo.name.length + 3 + songInfo.artist.length > 38) {
-        const artistChars = 38 - 3 - songInfo.name.length;
-        const slicedArtist = songInfo.artist.slice(0, artistChars - 1);
-        const newArtist = slicedArtist + '...';
-        songArtist.innerText = newArtist;
+      // if (songInfo.name.length + 3 + songInfo.artist.length > 38) {
+      //   const artistChars = 38 - 3 - songInfo.name.length;
+      //   const slicedArtist = songInfo.artist.slice(0, artistChars - 1);
+      //   const newArtist = slicedArtist + '...';
+      //   songArtist.innerText = newArtist;
 
-      } else {
-        songArtist.innerText = songInfo.artist;
-      }
+      // } else {
+      //   songArtist.innerText = songInfo.artist;
+      // }
 
       likeBtn.appendChild(likeIcon);
       songContainer.appendChild(songPosition);

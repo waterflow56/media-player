@@ -7,15 +7,12 @@ main.home-main .discover {
   margin: 0 auto;
 
   & h2 {
-    // margin-top: 32px;
     margin-top: 1em;
-    // font-size: 24px;
-    font-size: calc(1vw + 0.5rem);
-    // color: #333;
+    // font-size: calc(1vw + 0.5rem);
+    font-size: calc(1.5vw + 0.1rem);
   }
 
   & .preview-container {
-    // margin-top: 15px;
     margin-top: 0.9em;
     display: flex;
     align-items: center;
@@ -33,9 +30,7 @@ main.home-main .discover {
     }
 
     & .song-container {
-      // display: inline-block;
       width: 18%;
-      // margin-right: 2%;
       transition: transform 0.2s;
       cursor: pointer;
 
@@ -48,7 +43,6 @@ main.home-main .discover {
       }
 
       & .song-cover {
-        // cursor: pointer;
         width: 100%;
         border-radius: 5px;
         position: relative;
@@ -94,40 +88,15 @@ main.home-main .discover {
         }
       }
 
-      // &:nth-child(1) > .song-cover {
-      //   background: url('../images/OneRepublic - Rescue Me.jpg') center
-      //     center/cover no-repeat;
-      // }
-
-      // &:nth-child(2) > .song-cover {
-      //   background: url('../images/Taylor Swift - ME! (feat. Brendon Urie).jpg')
-      //     center center/cover no-repeat;
-      // }
-
-      // &:nth-child(3) > .song-cover {
-      //   background: url('../images/Miike Snow - Genghis Khan.jpg') center
-      //     center/cover no-repeat;
-      // }
-      // &:nth-child(4) > .song-cover {
-      //   background: url('../images/The Weeknd - Blinding Lights.jpg') center
-      //     center/cover no-repeat;
-      // }
-      // &:nth-child(5) > .song-cover {
-      //   background: url('../images/The Chain Gang of 1974 - Bends ft. TWINKIDS.jpg')
-      //     center center/cover no-repeat;
-      // }
-
       & h3 {
-        // font-size: 17px;
-        font-size: calc(0.55vw + 0.5rem);
-        // margin-top: 5px;
+        // font-size: calc(0.55vw + 0.5rem);
+        font-size: calc(0.95vw + 0.1rem);
         margin-top: 0.33em;
-        // color: #333;
       }
 
       & h4 {
-        // font-size: 15px;
-        font-size: calc(0.4vw + 0.5rem);
+        // font-size: calc(0.4vw + 0.5rem);
+        font-size: calc(0.85vw + 0.1rem);
         color: $secondary-color-light;
       }
     }
@@ -136,7 +105,6 @@ main.home-main .discover {
 
 main.home-main .popular-media {
   max-width: 92%;
-  // margin: 40px auto 0;
   margin: 2.5em auto 0;
   display: flex;
   justify-content: space-between;
@@ -148,7 +116,8 @@ main.home-main .popular-media {
   }
 
   main.home-main .discover h2 {
-    font-size: calc(2.75vw + 0.5rem);
+    // font-size: calc(2.75vw + 0.5rem);
+    font-size: calc(4.5vw + 0.1rem);
     font-weight: 600;
     letter-spacing: 0.1vw;
   }
@@ -167,11 +136,13 @@ main.home-main .popular-media {
     margin-right: 2%;
 
     & h3 {
-      font-size: calc(1.5vw + 0.5rem) !important;
+      // font-size: calc(1.5vw + 0.5rem) !important;
+      font-size: calc(3.25vw + 0.1rem) !important;
     }
 
     & h4 {
-      font-size: calc(1vw + 0.5rem) !important;
+      // font-size: calc(1vw + 0.5rem) !important;
+      font-size: calc(2.75vw + 0.1rem) !important;
     }
 
     &:hover {

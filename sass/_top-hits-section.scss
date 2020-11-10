@@ -3,13 +3,11 @@
   font-size: 1rem;
 
   & h2 {
-    // font-size: 24px;
-    font-size: calc(1vw + 0.5rem);
-    // color: #333;
+    // font-size: calc(1vw + 0.5rem);
+    font-size: calc(1.5vw + 0.1rem);
   }
 
   & .top-hits-container {
-    // margin-top: 15px;
     margin-top: 0.9em;
     display: flex;
     flex-direction: column;
@@ -21,8 +19,6 @@
       width: 100%;
       display: flex;
       align-items: center;
-      // padding: 10px 20px;
-      // padding: 0.625em 1.25em;
       padding: 0.525em 1.125em;
       border-radius: 5px;
       background-color: transparent;
@@ -37,20 +33,20 @@
       }
 
       & span {
-        // padding-right: 20px;
-        padding-right: 1.25em;
-        font-size: calc(0.4vw + 0.5rem);
+        // padding-right: 1.25em;
+        padding-right: 1em;
+        // font-size: calc(0.4vw + 0.5rem);
+        font-size: calc(0.9vw + 0.1rem);
       }
 
       & .song-info p:first-child {
-        // font-size: 16px;
-        font-size: calc(0.45vw + 0.5rem);
-        // color: #333;
+        // font-size: calc(0.45vw + 0.5rem);
+        font-size: calc(0.9vw + 0.1rem);
       }
 
       & .song-info p:last-child {
-        // font-size: 14px;
-        font-size: calc(0.3vw + 0.5rem);
+        // font-size: calc(0.3vw + 0.5rem);
+        font-size: calc(0.75vw + 0.1rem);
         color: $secondary-color-light;
       }
 
@@ -58,9 +54,8 @@
         margin-left: auto;
 
         & img {
-          // width: 18px;
-          // width: 1.25em;
-          width: calc(0.5vw + 0.5rem);
+          // width: calc(0.5vw + 0.5rem);
+          width: calc(0.95vw + 0.1rem);
         }
       }
     }
@@ -74,26 +69,22 @@
   }
 
   .popular-media .top-hits h2 {
-    font-size: calc(2.75vw + 0.5rem);
+    // font-size: calc(2.75vw + 0.5rem);
+    font-size: calc(4.5vw + 0.1rem);
     font-weight: 600;
     letter-spacing: 0.1vw;
   }
 
   .popular-media .top-hits .top-hits-container {
     margin-top: 0.6em;
-    // margin-top: 0;
   }
 
   .popular-media .top-hits .top-hit {
-    font-size: calc(1.75vw + 0.5rem);
-    // padding: 0.5em 0.5em !important;
-    // padding: 0.75em 0.5em !important;
-    padding: 1em 0.25em !important;
-    // padding: 0 !important;
-    // background: coral !important;
+    // font-size: calc(1.75vw + 0.5rem);
+    font-size: calc(3.4vw + 0.1rem);
+    padding: 1em 0.4em !important;
     border-radius: 0 !important;
     border-bottom: 2px solid $primary-color-light;
-    // margin-bottom: 0.4em;
     transition: color 0.2s !important;
 
     &.active {
@@ -102,19 +93,20 @@
     }
 
     &:hover {
-      // background-color: transparent !important;
-      color: $primary-color-light;
       background-color: transparent !important;
+      color: $primary-color-light;
     }
 
     & span {
-      margin-right: 0.25em !important;
+      margin-right: 0.4em !important;
       padding: 0 !important;
-      font-size: calc(1.5vw + 0.5rem) !important;
+      // font-size: calc(1.5vw + 0.5rem) !important;
+      font-size: calc(3.25vw + 0.1rem) !important;
     }
 
     & .song-info p:first-child {
-      font-size: calc(1.5vw + 0.5rem) !important;
+      // font-size: calc(1.5vw + 0.5rem) !important;
+      font-size: calc(3.25vw + 0.1rem) !important;
     }
 
     & .song-info p:last-child {
@@ -122,7 +114,8 @@
     }
 
     & button img {
-      width: calc(1.5vw + 0.5rem) !important;
+      // width: calc(1.5vw + 0.5rem) !important;
+      width: calc(3.25vw + 0.1rem) !important;
     }
   }
 }
