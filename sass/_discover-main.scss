@@ -7,7 +7,8 @@ main.home-main .discover {
   margin: 0 auto;
 
   & h2 {
-    margin-top: 1em;
+    // margin-top: 1em;
+    margin-top: 1.85vw;
     // font-size: calc(1vw + 0.5rem);
     font-size: calc(1.5vw + 0.1rem);
   }
@@ -118,6 +119,7 @@ main.home-main .popular-media {
   main.home-main .discover h2 {
     // font-size: calc(2.75vw + 0.5rem);
     font-size: calc(4.5vw + 0.1rem);
+    margin-top: 1em;
     font-weight: 600;
     letter-spacing: 0.1vw;
   }
@@ -131,9 +133,11 @@ main.home-main .popular-media {
   }
 
   main.home-main .song-container {
-    width: 37.5% !important;
+    // width: 37.5% !important;
+    width: 40% !important;
     display: inline-block;
-    margin-right: 2%;
+    // margin-right: 2%;
+    margin-right: 2.5%;
 
     & h3 {
       // font-size: calc(1.5vw + 0.5rem) !important;

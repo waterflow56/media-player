@@ -1,13 +1,15 @@
 header {
   width: 92%;
-  margin: 1.25em auto 0;
+  // margin: 1.25em auto 0;
+  margin: 1.25vw auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   & .search-container {
     position: relative;
-    width: 25%;
+    // width: 25%;
+    width: 30%;
 
     & input[type='text'] {
       padding: 0.625em 3.125em;
@@ -15,7 +17,7 @@ header {
       border-radius: 5px;
       width: 100%;
       // font-size: calc(0.3vw + 0.5rem);
-      font-size: calc(0.7vw + 0.1rem);
+      font-size: calc(0.725vw + 0.1rem);
       color: #a8a8a8;
       transition: border 0.2s;
       -webkit-appearance: none;
@@ -112,14 +114,15 @@ header {
       }
 
       & button {
-        display: block;
+        // display: block;
         // right: calc(1.25vw + 0.5rem);
         right: calc(3.5vw + 0.1rem);
         // width: calc(0.75vw + 0.5rem);
         // width: calc(3vw + 0.1rem) !important;
         width: auto !important;
         height: auto !important;
-        // background: red;
+        display: flex;
+        align-items: center;
 
         & img {
           width: calc(3.25vw + 0.1rem) !important;
@@ -132,25 +135,4 @@ header {
       display: none;
     }
   }
-
-  // header.show {
-  //   display: block;
-  // }
-
-  // header.hide {
-  //   display: none;
-  // }
-
-  // OLD STYLES
-  // header .settings {
-  //   width: 15%;
-  // }
-
-  // header .search-container {
-  //   width: 30%;
-
-  //   & input[type='text'] {
-  //     padding: 0.5em 3.125em;
-  //   }
-  // }
 }
