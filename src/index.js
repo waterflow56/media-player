@@ -222,6 +222,7 @@ window.fetch('./data.json', {
     })
   })
   .then(data => {
+    const video = document.getElementById('video');
     // LOADING MUSIC
     const audioPlayerSection = document.querySelector('.audio-player');
     const audio = document.getElementById('audio');
@@ -257,6 +258,7 @@ window.fetch('./data.json', {
       if (audio.paused) {
         playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
         audio.play();
+        video.pause();
       } else {
         playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
         audio.pause();
