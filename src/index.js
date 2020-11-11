@@ -434,7 +434,14 @@ window.fetch('./data.json', {
       progress.style.width = `${progressPercent}%`;
     });
     audio.addEventListener('ended', () => {
-      playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
+      if (nextSongIndex !== currentSongIndex && !repeatBtn.classList.contains('repeat-on')) {
+        nextSongIndex++;
+        previousSongIndex++;
+        loadStoredSongInfo(nextSongIndex);
+        playSong();
+      } else {
+        playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
+      }
     });
     previousBtn.addEventListener('click', () => {
       if (previousSongIndex > -1) {
