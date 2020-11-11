@@ -64,19 +64,22 @@
 
 @media screen and (max-width: 768px) {
   .popular-media .top-hits {
-    margin-top: 0.9em;
+    // margin-top: 0.9em;
+    // margin-top: 1em;
     width: 100%;
   }
 
   .popular-media .top-hits h2 {
     // font-size: calc(2.75vw + 0.5rem);
     font-size: calc(4.5vw + 0.1rem);
+    margin-top: 1.25em;
     font-weight: 600;
     letter-spacing: 0.1vw;
   }
 
   .popular-media .top-hits .top-hits-container {
-    margin-top: 0.6em;
+    margin-top: 0.3em;
+    // margin-top: 0;
   }
 
   .popular-media .top-hits .top-hit {

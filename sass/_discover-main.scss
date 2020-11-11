@@ -155,7 +155,9 @@ main.home-main .popular-media {
   }
 
   main.home-main .popular-media {
-    margin: 1.5em auto 0;
+    // margin: 1.5em auto 0;
+    margin: 0 auto;
+    // margin: 5em auto 0;
     flex-direction: column;
     width: 90%;
   }
