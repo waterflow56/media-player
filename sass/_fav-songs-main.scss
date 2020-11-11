@@ -14,7 +14,8 @@ main.fav-songs-main .flex {
   flex-direction: column;
 
   & .grid-nav {
-    font-size: calc(0.5vw + 0.5rem);
+    // font-size: calc(0.5vw + 0.5rem);
+    font-size: calc(1vw + 0.1rem);
     color: #595959;
     display: grid;
     display: flex;
@@ -24,18 +25,25 @@ main.fav-songs-main .flex {
 
     & h3:not(:first-of-type) {
       width: 22.5%;
+      // background: coral;
     }
 
     & h3:nth-child(5) {
-      width: 7.75%;
+      // width: 7.75%;
+      width: 10.25%;
+      // background: coral;
     }
 
     & h3:first-of-type {
-      width: 5%;
+      // width: 5%;
+      width: 4.25%;
+      // background: coral;
     }
 
     & h3:last-of-type {
-      width: 5%;
+      // width: 5%;
+      width: 1.5%;
+      // background: coral;
     }
   }
 
@@ -44,7 +52,8 @@ main.fav-songs-main .flex {
   }
 
   & .grid-content {
-    font-size: calc(0.375vw + 0.5rem);
+    // font-size: calc(0.375vw + 0.5rem);
+    font-size: calc(0.8vw + 0.1rem);
     margin-top: 0.5em;
 
     & .fav-song {
@@ -57,19 +66,36 @@ main.fav-songs-main .flex {
 
       & h3:not(:first-of-type) {
         width: 22.5%;
+        // background: coral;
+        // margin-left: 5%;
       }
 
       & h3:last-of-type {
-        width: 7.75%;
+        // background: coral;
+        // margin-right: 4%;
+        // width: 7.75%;
+        width: 10.25%;
+        // text-align: end;
       }
 
       & h3:first-of-type {
-        width: 5%;
+        // background: coral;
+        width: 4.25%;
+        // margin-right: 4.5%;
       }
 
+      // & h3:nth-of-type(3),
+      // & h3:nth-of-type(4),
+      // & h3:nth-of-type(5) {
+      //   margin-left: 4%;
+      // }
+
       & button {
-        width: 5%;
-        text-align: end;
+        // background: coral;
+
+        width: 1.5%;
+        // text-align: end;
+        // margin-left: auto;
       }
     }
 
@@ -106,7 +132,8 @@ main.fav-songs-main .flex {
   main.fav-songs-main h2 {
     display: block;
     margin-top: 1em;
-    font-size: calc(2.75vw + 0.5rem);
+    // font-size: calc(2.75vw + 0.5rem);
+    font-size: calc(4.5vw + 0.1rem);
     font-weight: 600;
     letter-spacing: 0.1vw;
   }

@@ -206,18 +206,21 @@ section.audio-player {
     }
 
     & .audio-song-name {
-      margin-left: calc(3.5vw + 0.1rem) !important;
+      // margin-left: calc(3.5vw + 0.1rem) !important;
+      margin-left: calc(2.5vw + 0.1rem) !important;
     }
 
     & .audio-song-name h3 {
       // font-size: calc(1.75vw + 0.5rem) !important;
-      font-size: calc(3.75vw + 0.1rem) !important;
+      // font-size: calc(3.75vw + 0.1rem) !important;
+      font-size: calc(4vw + 0.1rem) !important;
       margin-bottom: 0.15em;
     }
 
     & .audio-song-name h4 {
       // font-size: calc(1.5vw + 0.5rem) !important;
-      font-size: calc(3.25vw + 0.1rem) !important;
+      // font-size: calc(3.25vw + 0.1rem) !important;
+      font-size: calc(3.75vw + 0.1rem) !important;
     }
   }
 
@@ -233,10 +236,14 @@ section.audio-player {
 
   section.audio-player .controls .play-btn {
     width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
   }
 
   section.audio-player .controls .play-btn img {
     width: 3.5em !important;
+    height: 3.5em !important;
   }
 
   section.audio-player .progress-bar,
