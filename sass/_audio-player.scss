@@ -190,7 +190,8 @@ section.audio-player {
 @media only screen and (max-width: 768px) {
   section.audio-player {
     padding: 0 !important;
-    height: 4.75em !important;
+    // height: 4.75em !important;
+    height: 21vw !important;
 
     & .player-container {
       justify-content: space-between;
@@ -242,8 +243,10 @@ section.audio-player {
   }
 
   section.audio-player .controls .play-btn img {
-    width: 3.5em !important;
-    height: 3.5em !important;
+    // width: 3.5em !important;
+    // height: 3.5em !important;
+    width: 3.25em !important;
+    height: 3.25em !important;
   }
 
   section.audio-player .progress-bar,
