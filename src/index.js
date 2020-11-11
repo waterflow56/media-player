@@ -431,9 +431,11 @@ window.fetch('./data.json', {
     repeatBtn.addEventListener('click', repeatToggle);
     volumeBtn.addEventListener('click', muteAudio);
     audio.addEventListener('timeupdate', () => {
-      currentAudioProgress.innerText = getAudioTime('currentTime');
       const progressPercent = (audio.currentTime / audio.duration) * 100;
       progress.style.width = `${progressPercent}%`;
+      currentAudioProgress.innerText = getAudioTime('currentTime');
+      // Fix bug when user pauses music via external controls
+      (audio.paused) ? playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg" : playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
     });
     audio.addEventListener('ended', () => {
       if (nextSongIndex !== currentSongIndex && !repeatBtn.classList.contains('repeat-on')) {
