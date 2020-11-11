@@ -144,6 +144,16 @@ aside {
   aside .search-icon,
   aside .menu-icon {
     display: block;
+    height: auto;
+    width: auto;
+  }
+
+  aside .search-icon img {
+    height: 5vw;
+  }
+
+  aside .menu-icon img {
+    height: 7.5vw;
   }
 
   aside .aside-container > h1 {

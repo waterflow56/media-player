@@ -202,8 +202,10 @@ section.audio-player {
     width: 80% !important;
 
     & .audio-song-cover {
-      width: 3.25em !important;
-      height: 3.25em !important;
+      // width: 3.25em !important;
+      // height: 3.25em !important;
+      width: 14.5vw !important;
+      height: 14.5vw !important;
     }
 
     & .audio-song-name {
@@ -245,8 +247,10 @@ section.audio-player {
   section.audio-player .controls .play-btn img {
     // width: 3.5em !important;
     // height: 3.5em !important;
-    width: 3.25em !important;
-    height: 3.25em !important;
+    // width: 3.25em !important;
+    // height: 3.25em !important;
+    width: 12vw !important;
+    height: 12vw !important;
   }
 
   section.audio-player .progress-bar,
