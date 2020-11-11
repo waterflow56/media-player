@@ -1,5 +1,5 @@
 // Content Loaded
-import './modules/test.js';
+// import './modules/test.js';
 
 // SIDEBAR
 // Vars

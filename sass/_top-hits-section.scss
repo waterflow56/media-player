@@ -40,10 +40,10 @@
         font-size: calc(0.9vw + 0.1rem);
       }
 
-      & .song-info p:first-child {
-        // font-size: calc(0.45vw + 0.5rem);
-        // font-size: calc(0.9vw + 0.1rem);
-      }
+      // & .song-info p:first-child {
+      //   // font-size: calc(0.45vw + 0.5rem);
+      //   // font-size: calc(0.9vw + 0.1rem);
+      // }
 
       & .song-info p:last-child {
         // font-size: calc(0.3vw + 0.5rem);
@@ -85,7 +85,7 @@
 
   .popular-media .top-hits .top-hit {
     // font-size: calc(1.75vw + 0.5rem);
-    font-size: calc(3.4vw + 0.1rem);
+    font-size: calc(3.4vw + 0.1rem) !important;
     padding: 1em 0.4em !important;
     border-radius: 0 !important;
     border-bottom: 2px solid $primary-color-light;
