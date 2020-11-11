@@ -61,6 +61,9 @@ section.audio-player {
       width: 8%;
 
       & button {
+        display: flex;
+        align-items: center;
+
         &.previous-btn img,
         &.next-btn img {
           width: 1.25vw;

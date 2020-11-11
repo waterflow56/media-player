@@ -15,7 +15,7 @@
     margin-bottom: 6vw;
 
     & .top-hit {
-      cursor: pointer;
+      font-size: calc(0.9vw + 0.1rem);
       width: 100%;
       display: flex;
       align-items: center;
@@ -23,6 +23,7 @@
       border-radius: 5px;
       background-color: transparent;
       transition: background 0.2s;
+      cursor: pointer;
 
       &.active {
         background-color: #f4f4f4;
@@ -41,7 +42,7 @@
 
       & .song-info p:first-child {
         // font-size: calc(0.45vw + 0.5rem);
-        font-size: calc(0.9vw + 0.1rem);
+        // font-size: calc(0.9vw + 0.1rem);
       }
 
       & .song-info p:last-child {
