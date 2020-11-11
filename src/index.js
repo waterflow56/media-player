@@ -1,5 +1,5 @@
 // Content Loaded
-import './modules/_dark-mode.js';
+import './modules/test.js';
 
 // SIDEBAR
 // Vars
@@ -228,7 +228,9 @@ window.fetch('./data.json', {
     const songName = document.querySelector('.audio-song-name').querySelector('h4');
     const songArtist = document.querySelector('.audio-song-name').querySelector('h3');
     const songCover = document.querySelector('.audio-song-cover');
+    const previousBtn = document.querySelector('.previous-btn');
     const playBtn = document.querySelector('.play-btn');
+    const nextBtn = document.querySelector('.next-btn');
     const playBtnIcon = document.getElementById('play-btn-icon');
 
     const audioDuration = document.getElementById('audio-duration');
@@ -246,6 +248,11 @@ window.fetch('./data.json', {
     const volumeProgress = document.querySelector('.volume-progress');
     let volumeBuff;
 
+    let playedSongs = [];
+    let currentSongIndex = -1;
+    let previousSongIndex = -1;
+    let nextSongIndex = -1;
+
     function playSong() {
       if (audio.paused) {
         playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
@@ -257,6 +264,15 @@ window.fetch('./data.json', {
     }
 
     function loadSongInfo(artist, name, song, cover) {
+      playedSongs.push({
+        playedArtist: artist,
+        playedName: name,
+        playedSong: song,
+        playedCover: cover
+      });
+      currentSongIndex++;
+      previousSongIndex = currentSongIndex - 1;
+      nextSongIndex = previousSongIndex + 1;
       audio.src = song;
       audio.addEventListener('loadedmetadata', () => {
         audioDuration.innerText = getAudioTime('duration');
@@ -267,6 +283,20 @@ window.fetch('./data.json', {
       if (!audioPlayerSection.classList.contains('show')) {
         audioPlayerSection.classList.add('show');
       }
+    }
+
+    function loadStoredSongInfo(position) {
+      const song = playedSongs[position].playedSong;
+      const name = playedSongs[position].playedName;
+      const artist = playedSongs[position].playedArtist;
+      const cover = playedSongs[position].playedCover;
+      audio.src = song;
+      audio.addEventListener('loadedmetadata', () => {
+        audioDuration.innerText = getAudioTime('duration');
+      });
+      songName.innerText = name;
+      songArtist.innerText = artist;
+      songCover.style.background = `url('${cover}') no-repeat center center/cover`;
     }
 
     function getAudioTime(timeProgress) {
@@ -406,5 +436,21 @@ window.fetch('./data.json', {
     audio.addEventListener('ended', () => {
       playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
     });
+    previousBtn.addEventListener('click', () => {
+      if (previousSongIndex > -1) {
+        loadStoredSongInfo(previousSongIndex);
+        previousSongIndex--;
+        nextSongIndex--;
+        playSong();
+      }
+    });
+    nextBtn.addEventListener('click', () => {
+      if (nextSongIndex < currentSongIndex) {
+        previousSongIndex++;
+        nextSongIndex++;
+        loadStoredSongInfo(nextSongIndex);
+        playSong();
+      }
+    })
   })
   .catch(err => console.log(err));
