@@ -381,7 +381,7 @@ window.fetch('./data.json', {
     }
 
     document.querySelectorAll('.song-container').forEach(song => {
-      song.addEventListener('click', () => {
+      song.querySelector('.song-cover').addEventListener('click', () => {
         const songArtist = song.querySelector('h4').innerText;
         const songName = song.querySelector('h3').innerText;
         const songURL = `./assets/music/${songArtist} - ${songName}.mp3`;

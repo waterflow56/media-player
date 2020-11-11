@@ -33,7 +33,7 @@ main.home-main .discover {
     & .song-container {
       width: 18%;
       transition: transform 0.2s;
-      cursor: pointer;
+      cursor: default;
 
       &:hover .song-cover::before,
       &:hover .song-cover::after {
@@ -48,6 +48,7 @@ main.home-main .discover {
         width: 100%;
         border-radius: 5px;
         position: relative;
+        cursor: pointer;
 
         & img {
           width: 100%;
