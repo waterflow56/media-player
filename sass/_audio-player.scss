@@ -237,7 +237,7 @@ section.audio-player {
 
   section.audio-player .controls .previous-btn,
   section.audio-player .controls .next-btn {
-    display: none;
+    display: none !important;
   }
 
   section.audio-player .controls .play-btn {
