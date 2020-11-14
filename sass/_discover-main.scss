@@ -1,20 +1,32 @@
 main.home-main {
   display: block;
+  max-width: 92%;
+  // margin: 1.85vw auto 0;
+  // margin: 2.5vw auto 0;
+  margin: 2.5vw auto 0;
+  & h2 {
+    // margin-top: 1em;
+    // margin-top: 1.85vw;
+    // margin-top: 2.5vw;
+    // font-size: calc(1vw + 0.5rem);
+    font-size: calc(1.5vw + 0.1rem);
+    color: #fbfbfb;
+  }
 }
 
 main.home-main .discover {
-  max-width: 92%;
-  margin: 0 auto;
-
-  & h2 {
-    // margin-top: 1em;
-    margin-top: 1.85vw;
-    // font-size: calc(1vw + 0.5rem);
-    font-size: calc(1.5vw + 0.1rem);
-  }
+  // max-width: 92%;
+  // margin: 2.5vw auto 0;
+  background-color: $box-color;
+  // padding: 1em 1.5em;
+  // padding: 1em;
+  padding: 1.05vw;
+  border-radius: 10px;
+  // margin-top: 1em;
+  margin-top: 1.05vw;
 
   & .preview-container {
-    margin-top: 0.9em;
+    // margin-top: 0.9em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,43 +102,64 @@ main.home-main .discover {
         // font-size: calc(0.55vw + 0.5rem);
         font-size: calc(0.95vw + 0.1rem);
         margin-top: 0.33em;
+        color: $text-primary-color;
       }
 
       & h4 {
         // font-size: calc(0.4vw + 0.5rem);
         font-size: calc(0.85vw + 0.1rem);
-        color: $secondary-color-light;
+        // color: $secondary-color-light;
+        color: $text-secondary-color;
       }
     }
   }
 }
 
 main.home-main .popular-media {
-  max-width: 92%;
-  margin: 2.5em auto 0;
+  // max-width: 92%;
+  max-width: 100%;
+  // margin: 2.5em auto 0;
+  // margin: 1.85vw auto 0;
+  margin: 3vw auto 0;
   display: flex;
   justify-content: space-between;
+  // background: coral;
+  // height: 29.7vw;
 }
 
 @media only screen and (max-width: 768px) {
-  main.home-main .discover {
-    width: 90%;
+  main.home-main {
+    margin: 6vw auto 0;
   }
 
-  main.home-main .discover h2 {
-    // font-size: calc(2.75vw + 0.5rem);
+  main.home-main h2 {
     font-size: calc(4.5vw + 0.1rem);
-    margin-top: 1em;
+    // margin-top: 1em;
     font-weight: 600;
     letter-spacing: 0.1vw;
   }
+
+  main.home-main .discover {
+    // width: 90%;
+    // width: 100%;
+    margin-top: 3vw;
+    padding: 3vw;
+  }
+
+  // main.home-main .discover h2 {
+  //   // font-size: calc(2.75vw + 0.5rem);
+  //   font-size: calc(4.5vw + 0.1rem);
+  //   margin-top: 1em;
+  //   font-weight: 600;
+  //   letter-spacing: 0.1vw;
+  // }
 
   main.home-main .discover .preview-container {
     display: block;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-top: 0.9em;
+    // margin-top: 0.9em;
   }
 
   main.home-main .song-container {
@@ -156,6 +189,7 @@ main.home-main .popular-media {
     margin: 0 auto;
     // margin: 5em auto 0;
     flex-direction: column;
-    width: 90%;
+    // width: 90%;
+    width: 100%;
   }
 }

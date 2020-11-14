@@ -6,16 +6,12 @@ main.videos-main {
 }
 
 main.videos-main .videos-container {
+  margin-top: 0.9em;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5em;
   row-gap: 1em;
-
-  & h2 {
-    display: none;
-    // color: #333;
-  }
 }
 
 main.videos-main .videos-container .video-container {

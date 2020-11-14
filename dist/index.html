@@ -18,22 +18,23 @@
       <aside>
         <div class="aside-container">
           <button class="search-icon" id="search-toggle">
-            <img src="./assets/icons/LightMode/mobile/search-mobile.svg">
+            <img src="./assets/icons/LightMode/search-mobile.svg">
           </button>
   
           <h1 class="logo" id="logo">YOUTIFY</h1>
   
           <button class="menu-icon" id="menu-toggle">
-            <img src="./assets/icons/LightMode/menu.svg">
+            <img src="./assets/icons/LightMode/menu1.svg">
           </button>
   
-          <nav id="menu">
+          <nav id="menu">         
+            <h2>DISCOVER</h2>
             <div class="main-nav">
               <ul>
                 <li class="section-toggle active" id="home-main-toggle">
                     <img
                       id="home-icon"
-                      src="./assets/icons/LightMode/home.svg"
+                      src="./assets/icons/LightMode/home1.svg"
                       alt="Home Icon"
                     />
                     <h3>Home</h3>
@@ -41,7 +42,7 @@
                 <li class="section-toggle" id="videos-main-toggle">
                     <img
                       id="videos-icon"
-                      src="./assets/icons/LightMode/videos.svg"
+                      src="./assets/icons/LightMode/videos1.svg"
                       alt="Videos Icon"
                     />
                     <h3>Videos</h3>
@@ -56,7 +57,7 @@
                 <li class="section-toggle" id="fav-songs-main-toggle">
                     <img
                       id="like-icon"
-                      src="./assets/icons/LightMode/like.svg"
+                      src="./assets/icons/LightMode/like1.svg"
                       alt="Like Icon"
                     />
                     <h3>Favorite Songs</h3>
@@ -74,11 +75,19 @@
             <img src="./assets/icons/LightMode/search.svg"/>
             <input type="text" placeholder="Search for lyrics (in development)" />
             <button id="close-btn">
-              <img src="./assets/icons/LightMode/mobile/cross.svg"/>
+              <img src="./assets/icons/LightMode/cross.svg" />
             </button>
           </div>
-  
+
           <div class="settings">
+            <div class="avatar-container">
+              <img src="./assets/icons/LightMode/user-avatar.svg" />
+            </div>
+            <div class="name-container">
+              <h3>John Doe</h3>
+            </div>
+          </div>
+          <!-- <div class="settings">
             <button id="dark-mode-toggle">
               <img
                   title="Light/Dark Mode"
@@ -100,39 +109,41 @@
                   alt="User Avatar Icon"
               />
             </button>
-          </div>
+          </div> -->
         </header>
   
         <main class="home-main">
+          <h2>New Releases</h2>
           <section class="discover">
-            <h2>New Releases</h2>
             <div class="preview-container"></div>
           </section>
   
           <section class="popular-media">
             <section class="top-video">
               <h2>Video of the Week</h2>
-              <div class="video-container" id="video-container">
-                <video id="video"
-                  src="./assets/videos/Rick Astley - Never Gonna Give You Up.mp4"
-                  poster="./assets/images/originals/bends-poster.jpg" controls></video>
-                <!-- <div class="video-controls">
-                  <span id="video-timestamp">00:00 / 00:00</span>
-                  <button id="video-play" class="btn">
-                    <i class="fas fa-play"></i>
-                  </button>
-                  <div class="video-progress-container">
-                    <div class="video-progress"></div>
-                  </div>
-                  <button id="video-volume" class="btn">
-                    <i class="fas fa-volume-up"></i>
-                  </button>
-                  <button id="video-expand" class="btn">
-                    <i class="fas fa-expand"></i>
-                  </button>
-                </div> -->
+              <div class="top-video-container">
+                <div class="video-container" id="video-container">
+                  <video id="video"
+                    src="./assets/videos/Rick Astley - Never Gonna Give You Up.mp4"
+                    poster="./assets/images/originals/bends-poster.jpg" controls></video>
+                  <!-- <div class="video-controls">
+                    <span id="video-timestamp">00:00 / 00:00</span>
+                    <button id="video-play" class="btn">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <div class="video-progress-container">
+                      <div class="video-progress"></div>
+                    </div>
+                    <button id="video-volume" class="btn">
+                      <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button id="video-expand" class="btn">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div> -->
+                </div>
+                <h3>The Chain Gang of 1974 - Bends (Official Music Video)</h3>
               </div>
-              <h3>The Chain Gang of 1974 - Bends (Official Music Video)</h3>
             </section>
   
             <section class="top-hits">
@@ -141,11 +152,18 @@
             </section>
           </section>
         </main>
+
+        <!-- Videos Main -->
+        <main class="videos-main">
+          <h2>Videos</h2>
+          <div class="videos-container">
+          </div>
+        </main>
   
         <!-- Favorite Songs Main -->
         <main class="fav-songs-main">
+          <h2>John's Liked Songs</h2>
           <div class="fav-songs-container">
-            <h2>Favorite Songs</h2>
             <div class="flex">
               <div class="grid-nav">
                 <h3></h3>
@@ -157,13 +175,6 @@
               </div>
               <div class="grid-content"></div>
             </div>
-          </div>
-        </main>
-
-        <!-- Videos Main -->
-        <main class="videos-main">
-          <div class="videos-container">
-            <h2>Videos</h2>
           </div>
         </main>
       </section>

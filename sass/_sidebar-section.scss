@@ -1,5 +1,6 @@
 aside {
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: #191a1f;
   width: 20%;
 
   & .aside-container {
@@ -15,8 +16,11 @@ aside {
     font-size: calc(1.15vw + 0.1rem);
     // margin: 1.25em 0 3.5em 3em;
     // margin: 1.5em 0 3.5em 3em;
-    margin: 1.85vw 0 3.5em 3em;
+    // margin: 1.85vw 0 3.5em 3em;
+    // margin: 1.85vw 0 0 3em;
+    margin: 1.85vw 0 0 3.75vw;
     color: $primary-color-light;
+    // color: #3d51fa;
     letter-spacing: 0.2em;
     font-weight: 600;
     cursor: default;
@@ -37,13 +41,17 @@ aside {
     font-size: calc(0.85vw + 0.1rem);
     font-weight: 400;
     // padding: 0.45em 0 0.45em 3.5em;
-    padding: 0.75em 0 0.75em 3.5em;
-    border-left: 0.3em solid #fff;
+    // padding: 0.75em 0 0.75em 3.5em;
+    padding: 0.7em 0 0.7em 3.5em;
+    // padding: 0.75em 0 0.75em 3.25vw;
+    border-left: 0.3em solid transparent;
     margin-bottom: 0.33em;
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #333;
+    // color: #333;
+    color: $text-primary-color;
+    transition: border-color 0.3s, color 0.3s;
     cursor: pointer;
   }
 
@@ -55,7 +63,9 @@ aside {
   & .main-nav li.active,
   & .my-music-nav li.active {
     border-left: 0.3em solid $primary-color-light;
-    background: linear-gradient(90deg, rgba(84, 152, 255, 0.05), transparent);
+    // background: linear-gradient(90deg, rgba(84, 152, 255, 0.05), transparent);
+    // background: linear-gradient(90deg, rgba(255, 84, 141, 0.05), transparent);
+    color: $primary-color-light;
   }
 
   & .main-nav li h3,
@@ -72,16 +82,26 @@ aside {
   & h2 {
     // font-size: 1.125em;
     // font-size: calc(0.45vw + 0.5rem);
-    font-size: calc(0.95vw + 0.1rem);
-    color: #646464;
+    // font-size: calc(0.95vw + 0.1rem);
+    font-size: calc(0.9vw + 0.1rem);
+    // color: #646464;
+    color: $text-secondary-color;
     // margin-left: 3.75em;
-    margin-left: 3.4em;
+    // margin-left: 3.4em;
+    margin-left: 3.6em;
     margin-top: 2.5em;
     cursor: default;
+    margin-bottom: 0.95em;
   }
 
-  & .my-music-nav {
-    margin-top: 0.95em;
+  & h2:first-of-type {
+    margin-top: 0;
+    // margin-top: 1.85vw;
+    // margin-top: 5.5vw;
+    // margin-top: 5.25em;
+    // margin-top: 5em;
+    margin-top: 6.5em;
+    // background: coral;
   }
 
   & .search-icon {
@@ -174,7 +194,8 @@ aside {
     top: 15vw;
     left: 0;
     width: 100%;
-    background: #fff;
+    // background: #fff;
+    background-color: #191a1f;
     z-index: 10;
     padding: 0 0 1.25em;
   }
@@ -224,7 +245,8 @@ aside {
   aside .main-nav li.active,
   aside .my-music-nav li.active {
     border-left: none;
-    background: #fff;
+    // background: #fff;
+    background-color: #191a1f;
     // background: rgba(84, 152, 255, 0.05);
     // color: #fff;
     // background-color: $primary-color-light;

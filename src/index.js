@@ -111,7 +111,7 @@ window.fetch('./data.json', {
       songInfo.className = 'song-info';
       songName.innerText = `${topHitInfo.artist} - ${topHitInfo.name}`;
       songAlbum.innerText = topHitInfo.album;
-      likeIcon.src = './assets/icons/LightMode/like.svg';
+      likeIcon.src = './assets/icons/LightMode/like1.svg';
 
       likeBtn.appendChild(likeIcon);
       songInfo.appendChild(songName);
@@ -189,7 +189,7 @@ window.fetch('./data.json', {
       songArtist.innerText = songInfo.artist;
       songAlbum.innerText = songInfo.album;
       songAddedDate.innerText = songInfo.addedDate;
-      likeIcon.src = './assets/icons/LightMode/liked.svg';
+      likeIcon.src = './assets/icons/LightMode/liked1.svg';
       songContainer.className = 'fav-song';
       // Slice artist if total row length is more than 38 chars
       // if (songInfo.name.length + 3 + songInfo.artist.length > 38) {
@@ -256,11 +256,11 @@ window.fetch('./data.json', {
 
     function playSong() {
       if (audio.paused) {
-        playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
+        playBtnIcon.src = "./assets/icons/LightMode/pause-btn1.svg";
         audio.play();
         video.pause();
       } else {
-        playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
+        playBtnIcon.src = "./assets/icons/LightMode/play-btn1.svg";
         audio.pause();
       }
     }
@@ -329,7 +329,7 @@ window.fetch('./data.json', {
 
     function repeatToggle() {
       if (!repeatBtn.classList.contains('repeat-on')) {
-        repeatBtn.querySelector('img').src = './assets/icons/LightMode/repeat-on.svg';
+        repeatBtn.querySelector('img').src = './assets/icons/LightMode/repeat-on1.svg';
         repeatBtn.classList.add('repeat-on');
         audio.addEventListener('ended', playSong);
       } else {
@@ -435,7 +435,7 @@ window.fetch('./data.json', {
       progress.style.width = `${progressPercent}%`;
       currentAudioProgress.innerText = getAudioTime('currentTime');
       // Fix bug when user pauses music via external controls
-      (audio.paused) ? playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg" : playBtnIcon.src = "./assets/icons/LightMode/pause-btn.svg";
+      (audio.paused) ? playBtnIcon.src = "./assets/icons/LightMode/play-btn1.svg" : playBtnIcon.src = "./assets/icons/LightMode/pause-btn1.svg";
     });
     audio.addEventListener('ended', () => {
       if (nextSongIndex !== currentSongIndex && !repeatBtn.classList.contains('repeat-on')) {
@@ -444,7 +444,7 @@ window.fetch('./data.json', {
         loadStoredSongInfo(nextSongIndex);
         playSong();
       } else {
-        playBtnIcon.src = "./assets/icons/LightMode/play-btn.svg";
+        playBtnIcon.src = "./assets/icons/LightMode/play-btn1.svg";
       }
     });
     previousBtn.addEventListener('click', () => {
