@@ -126,7 +126,11 @@
 
     &.active {
       background-color: transparent !important;
-      color: $primary-color-light;
+
+      & span,
+      p {
+        color: $primary-color-light !important;
+      }
     }
 
     &:hover {
