@@ -120,7 +120,8 @@
     font-size: calc(3.4vw + 0.1rem) !important;
     padding: 1em 0.4em !important;
     border-radius: 0 !important;
-    border-bottom: 2px solid $primary-color-light;
+    // border-bottom: 2px solid $primary-color-light;
+    border-bottom: 1.5px solid $primary-color-light;
     transition: color 0.2s !important;
 
     &.active {
