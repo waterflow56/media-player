@@ -187,7 +187,7 @@ main.fav-songs-main .flex {
 
   main.fav-songs-main .flex .fav-song {
     // font-size: calc(1.75vw + 0.5rem);
-    font-size: calc(3.4vw + 0.1rem);
+    font-size: calc(3.4vw + 0.1rem) !important;
     width: 100%;
     display: flex !important;
     align-items: center;
