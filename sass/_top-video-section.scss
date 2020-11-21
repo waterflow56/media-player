@@ -28,6 +28,10 @@
       border-radius: 5px;
       position: relative;
 
+      &:focus {
+        outline: none;
+      }
+
       // &::-webkit-media-controls {
       //   display: none !important;
       // }

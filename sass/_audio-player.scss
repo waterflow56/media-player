@@ -41,6 +41,7 @@ section.audio-player {
 
       & .audio-song-name {
         margin-left: calc(0.8vw + 0.1rem);
+        cursor: default;
 
         & h3 {
           color: $text-primary-color;
