@@ -15,26 +15,15 @@ main.home-main {
 }
 
 main.home-main .discover {
-  // max-width: 92%;
-  // margin: 2.5vw auto 0;
   background-color: $box-color;
-  // padding: 1em 1.5em;
-  // padding: 1em;
   padding: 1.05vw;
   border-radius: 10px;
-  // margin-top: 1em;
   margin-top: 1.05vw;
 
   & .preview-container {
-    // margin-top: 0.9em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // overflow-x: auto;
-    // overflow-y: hidden;
-    // white-space: nowrap;
-    // overflow-y: hidden;
-    // width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -43,7 +32,6 @@ main.home-main .discover {
     }
 
     & .song-container {
-      // width: 18%;
       width: 18.8%;
       transition: transform 0.2s;
       cursor: default;

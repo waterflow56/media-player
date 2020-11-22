@@ -99,34 +99,40 @@
     }
   ],
 
-  "favoriteSongsMain": [
+  "users": [
     {
-      "position": 1,
-      "name": "Into the Unknown",
-      "artist": "Panic! At The Disco",
-      "album": "Frozen 2 (Original Motio...",
-      "addedDate": "2020-01-27"
-    },
-    {
-      "position": 2,
-      "name": "On My Own",
-      "artist": "Jaden",
-      "album": "Erys",
-      "addedDate": "2020-05-10"
-    },
-    {
-      "position": 3,
-      "name": "The Man",
-      "artist": "The Killers",
-      "album": "Wonderful Wonderful",
-      "addedDate": "2019-11-15"
-    },
-    {
-      "position": 4,
-      "name": "Here Comes the Hotstepper",
-      "artist": "Evian",
-      "album": "Yuksek Remix",
-      "addedDate": "2012-02-11"
+      "userFirstName": "John",
+      "userLastName": "Doe",
+      "favoriteSongs": [
+        {
+          "position": 1,
+          "name": "Into the Unknown",
+          "artist": "Panic! At The Disco",
+          "album": "Frozen 2 (Original Motio...",
+          "addedDate": "2020-01-27"
+        },
+        {
+          "position": 2,
+          "name": "On My Own",
+          "artist": "Jaden",
+          "album": "Erys",
+          "addedDate": "2020-05-10"
+        },
+        {
+          "position": 3,
+          "name": "The Man",
+          "artist": "The Killers",
+          "album": "Wonderful Wonderful",
+          "addedDate": "2019-11-15"
+        },
+        {
+          "position": 4,
+          "name": "Here Comes the Hotstepper",
+          "artist": "Evian",
+          "album": "Yuksek Remix",
+          "addedDate": "2012-02-11"
+        }
+      ]
     }
   ]
 }

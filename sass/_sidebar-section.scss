@@ -20,6 +20,7 @@ aside {
     // margin: 1.85vw 0 0 3em;
     margin: 1.85vw 0 0 3.75vw;
     color: $primary-color-light;
+    text-shadow: 0 0 10px 5px darken($primary-color-light, 37.5%);
     // color: #3d51fa;
     letter-spacing: 0.2em;
     font-weight: 600;

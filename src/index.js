@@ -1,5 +1,6 @@
 // Content Loaded
 // import './modules/test.js';
+import User from './modules/_user';
 
 // SIDEBAR
 // Vars
@@ -71,6 +72,70 @@ window.fetch('./data.json', {
   method: 'GET'
 })
   .then(res => res.json())
+  .then(data => {
+    const userObj = new User(data.users[0].userFirstName, data.users[0].userLastName, './assets/icons/LightMode/user-avatar.svg');
+    const userName = document.getElementById('user-name');
+    const userAvatar = document.getElementById('user-avatar');
+    const usersSongsTitle = document.getElementById('users-songs-title');
+    userName.innerText = userObj.fullName;
+    userAvatar.style.background = `url(${userObj.avatar}) no-repeat center center/cover`;
+    usersSongsTitle.innerText = `${userObj.firstName}'s Liked Songs`;
+    
+    // Favorite Songs Main Data
+    data.users[0].favoriteSongs.forEach(songInfo => {
+      const songsContainer = document.querySelector('.grid-content');
+      const songContainer = document.createElement('div');
+      const songPosition = document.createElement('h3');
+      const songName = document.createElement('h3');
+      const nameDivider = document.createElement('span');
+      const songArtist = document.createElement('h3');
+      const songAlbum = document.createElement('h3');
+      const songAddedDate = document.createElement('h3');
+      const likeBtn = document.createElement('button');
+      const likeIcon = document.createElement('img');
+
+      songPosition.innerText = getSongsPosition();
+      songName.innerText = songInfo.name;
+      songName.className = 'name';
+      nameDivider.innerText = '-';
+      songArtist.className = 'artist';
+      songArtist.innerText = songInfo.artist;
+      songAlbum.innerText = songInfo.album;
+      songAddedDate.innerText = songInfo.addedDate;
+      likeIcon.src = './assets/icons/LightMode/liked1.svg';
+      songContainer.className = 'fav-song';
+      // Slice artist if total row length is more than 38 chars
+      // if (songInfo.name.length + 3 + songInfo.artist.length > 38) {
+      //   const artistChars = 38 - 3 - songInfo.name.length;
+      //   const slicedArtist = songInfo.artist.slice(0, artistChars - 1);
+      //   const newArtist = slicedArtist + '...';
+      //   songArtist.innerText = newArtist;
+
+      // } else {
+      //   songArtist.innerText = songInfo.artist;
+      // }
+
+      likeBtn.appendChild(likeIcon);
+      songContainer.appendChild(songPosition);
+      songContainer.appendChild(songName);
+      songContainer.appendChild(nameDivider);
+      songContainer.appendChild(songArtist);
+      songContainer.appendChild(songAlbum);
+      songContainer.appendChild(songAddedDate);
+      songContainer.appendChild(likeBtn);
+      songsContainer.appendChild(songContainer);
+
+      function getSongsPosition() {
+        if (songInfo.position < 10) {
+          return '0'+ songInfo.position + '.';
+        } else {
+          return songInfo.position + '.';
+        }
+      }
+    })
+
+    return data;
+  })
   .then(data => {
     // FETCHING DATA
     // New Releases Data
@@ -168,58 +233,7 @@ window.fetch('./data.json', {
       }
     })
 
-    // Favorite Songs Main Data
-    data.favoriteSongsMain.forEach(songInfo => {
-      const songsContainer = document.querySelector('.grid-content');
-      const songContainer = document.createElement('div');
-      const songPosition = document.createElement('h3');
-      const songName = document.createElement('h3');
-      const nameDivider = document.createElement('span');
-      const songArtist = document.createElement('h3');
-      const songAlbum = document.createElement('h3');
-      const songAddedDate = document.createElement('h3');
-      const likeBtn = document.createElement('button');
-      const likeIcon = document.createElement('img');
-
-      songPosition.innerText = getSongsPosition();
-      songName.innerText = songInfo.name;
-      songName.className = 'name';
-      nameDivider.innerText = '-';
-      songArtist.className = 'artist';
-      songArtist.innerText = songInfo.artist;
-      songAlbum.innerText = songInfo.album;
-      songAddedDate.innerText = songInfo.addedDate;
-      likeIcon.src = './assets/icons/LightMode/liked1.svg';
-      songContainer.className = 'fav-song';
-      // Slice artist if total row length is more than 38 chars
-      // if (songInfo.name.length + 3 + songInfo.artist.length > 38) {
-      //   const artistChars = 38 - 3 - songInfo.name.length;
-      //   const slicedArtist = songInfo.artist.slice(0, artistChars - 1);
-      //   const newArtist = slicedArtist + '...';
-      //   songArtist.innerText = newArtist;
-
-      // } else {
-      //   songArtist.innerText = songInfo.artist;
-      // }
-
-      likeBtn.appendChild(likeIcon);
-      songContainer.appendChild(songPosition);
-      songContainer.appendChild(songName);
-      songContainer.appendChild(nameDivider);
-      songContainer.appendChild(songArtist);
-      songContainer.appendChild(songAlbum);
-      songContainer.appendChild(songAddedDate);
-      songContainer.appendChild(likeBtn);
-      songsContainer.appendChild(songContainer);
-
-      function getSongsPosition() {
-        if (songInfo.position < 10) {
-          return '0'+ songInfo.position + '.';
-        } else {
-          return songInfo.position + '.';
-        }
-      }
-    })
+    return data;
   })
   .then(data => {
     const video = document.getElementById('video');
@@ -463,5 +477,10 @@ window.fetch('./data.json', {
         playSong();
       }
     })
+
+    return data;
+  })
+  .then(data => {
+    document.body.style.display = "block";
   })
   .catch(err => console.log(err));
