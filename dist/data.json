@@ -103,6 +103,7 @@
     {
       "userFirstName": "John",
       "userLastName": "Doe",
+      "userAvatar": "./assets/icons/LightMode/user-avatar.svg",
       "favoriteSongs": [
         {
           "position": 1,

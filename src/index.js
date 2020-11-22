@@ -73,7 +73,8 @@ window.fetch('./data.json', {
 })
   .then(res => res.json())
   .then(data => {
-    const userObj = new User(data.users[0].userFirstName, data.users[0].userLastName, './assets/icons/LightMode/user-avatar.svg');
+    const currentUser = data.users[0];
+    const userObj = new User(currentUser.userFirstName, currentUser.userLastName, currentUser.userAvatar);
     const userName = document.getElementById('user-name');
     const userAvatar = document.getElementById('user-avatar');
     const usersSongsTitle = document.getElementById('users-songs-title');
@@ -82,7 +83,7 @@ window.fetch('./data.json', {
     usersSongsTitle.innerText = `${userObj.firstName}'s Liked Songs`;
     
     // Favorite Songs Main Data
-    data.users[0].favoriteSongs.forEach(songInfo => {
+    currentUser.favoriteSongs.forEach(songInfo => {
       const songsContainer = document.querySelector('.grid-content');
       const songContainer = document.createElement('div');
       const songPosition = document.createElement('h3');
